@@ -44,10 +44,10 @@
 	</header>
 	
 	<main>
-	  <h1>Глейси. Магазин мороженого</h1>
+	  <h1 class="visually-hidden">Глейси. Магазин мороженого</h1>
 	  
       <section>
-	    <h2>Слайдер изображений мороженого.</h2>
+	    <h2 class="visually-hidden">Слайдер изображений мороженого.</h2>
 		<ul>
 		  <li>
 		    <img src="img/ice-double-1.png" width="647" height="584" alt="фото пары мороженых">
@@ -77,7 +77,7 @@
 	  </section>
 	  
 	  <section>
-	    <h2>Баннеры спец предложений.</h2>
+	    <h2 class="visually-hidden">Баннеры спец предложений.</h2>
 		<div>
 		    <h3>Малинка даром!</h3>
 			<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -91,7 +91,7 @@
 	  </section>
       	
 	  <section>
-	    <h2>Хиты мороженого.</h2>
+	    <h2 class="visually-hidden">Хиты мороженого.</h2>
 		<ul>
 		  <li>
 		    <a href="#">
@@ -137,7 +137,7 @@
       </section>
 	  
 	  <section>
-	    <h2>Магазин Глэйси — мороженое собственного производства.</h2>
+	    <h2 class="visually-hidden">Магазин Глэйси — мороженое собственного производства.</h2>
 	    <p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
 		<ul>
 		  <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
@@ -155,13 +155,19 @@
 	  </article>
 	  
 	  <section>
-	    <h2>Рассылка</h2>
+	    <h2 class="visually-hidden">Рассылка</h2>
 	    <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-		<!-- Здесь будет форма -->
+		<form action="https://echo.htmlacademy.ru" method="post">
+		  <p>
+		    <label class="visually-hidden" for="post-id">Логин</label>
+		    <input type="email" name="email" id="post-id" placeholder="email@example.com">
+            <button type="submit">Отправить</button>
+          </p>  		  
+		</form>
 	  </section>
 	  
 	  <section>
-	    <h2>Наши координаты</h2>
+	    <h2 class="visually-hidden">Наши координаты</h2>
 		  <div>
 		    <img src="img/map.png" width="1200" height="430" alt="карта">
 		    <img src="img/pin.svg" width="80" height="140" alt="маркер">
@@ -178,6 +184,56 @@
               <a href="#">Форма обратной связи</a>
 			</div>			
 		  </div>
+	  </section>
+	  
+	  <section>
+	    <h2>Поиск</h2>
+		<form action="https://echo.htmlacademy.ru" method="get">
+		  <p>
+		    <label class="visually-hidden" for="search-id">Поиск</label>
+		    <input type="search" name="search" id="search-id" placeholder="Крем-брюле">
+		  </p>  
+		</form>
+	  </section>
+	  
+	  <section>
+	    <h2 class="visually-hidden">Вход в личный кабинет</h2>
+		<form action="https://echo.htmlacademy.ru" method="post">
+		  <p>
+		    <label class="visually-hidden" for="login-id">Логин</label>
+		    <input type="text" name="login" id="login-id" placeholder="email@example.com">
+		  </p>
+		  <p>
+		    <label class="visually-hidden" for="password-id">Пароль</label>
+		    <input type="password" name="password" id="password-id" placeholder="********">
+		  </p> 
+          <p>
+		    <a href="#">Забыли пароль</a> <br>
+			<a href="#">Новая регистрация</a>
+		  </p>
+          <button type="submit">Войти</button>  		  
+		</form>		
+	  </section>
+	  
+	  <section>
+	    <h2 class="visually-hidden">Форма обратной связи</h2>
+		<p>Мы обязательно вам ответим!</p>
+		<form action="https://echo.htmlacademy.ru" method="post">
+		  <p>
+		    <label class="visually-hidden" for="name-id">Имя Фамилия</label>
+		    <input type="text" name="name" id="name-id" placeholder="Имя Фамилия">
+		  </p>
+		  <p>
+		    <label class="visually-hidden" for="email-id">E-mail</label>
+		    <input type="email" name="email" id="email-id" placeholder="email@example.com">
+		  </p>
+		  <p>
+		    <label class="visually-hidden" for="message-id">Сообщение</label>
+		    <textarea name="message" id="message-id" cols="60" rows="10" placeholder="В свободной форме"></textarea>
+		  </p>
+		  <button type="submit">Отправить</button>
+		</form>
+		<button type="button">Закрыть</button>
 	  </section>
 	</main>
 	
