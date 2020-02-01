@@ -52,10 +52,10 @@
 	  
 	  <h1>Сливочное мороженое</h1>
 	  
-	  <!-- Здесь будет форма -->
+      <!-- здесь будет форма фильтра -->
 	   
 	  <section>
-	    <h2>Каталог мороженого</h2>
+	    <h2 class="visually-hidden">Каталог мороженого</h2>
 		<ul>
 		  <li>
 		    <a href="#">
@@ -65,7 +65,7 @@
 			  </figure>
 			  <p>310&#8381;<span>/кг</span></p>
 			</a>
-			<button>Быстрый просмотр</button>
+			<a href="#">Быстрый просмотр</a>
 		  </li>
 		  <li>
 		    <a href="#">
@@ -75,7 +75,7 @@
 			  </figure>
 			  <p>380&#8381;<span>/кг</span></p>
 			</a>
-			<button>Быстрый просмотр</button>
+			<a href="#">Быстрый просмотр</a>
 		  </li>
 		  <li>
 		    <a href="#">
@@ -85,7 +85,7 @@
 			  </figure>
 			  <p>355&#8381;<span>/кг</span></p>
 			</a>
-			<button>Быстрый просмотр</button>
+			<a href="#">Быстрый просмотр</a>
 		  </li>
 		  <li>
 		    <a href="#">
@@ -95,7 +95,7 @@
 			  </figure>
 			  <p>415&#8381;<span>/кг</span></p>
 			</a>
-			<button>Быстрый просмотр</button>
+			<a href="#">Быстрый просмотр</a>
 		  </li>
 		  <li>
 		    <a href="#">
@@ -105,7 +105,7 @@
 			  </figure>
 			  <p>325&#8381;<span>/кг</span></p>
 			</a>
-			<button>Быстрый просмотр</button>
+			<a href="#">Быстрый просмотр</a>
 		  </li>
 		  <li>
 		    <a href="#">
@@ -115,7 +115,7 @@
 			  </figure>
 			  <p>410&#8381;<span>/кг</span></p>
 			</a>
-			<button>Быстрый просмотр</button>
+			<a href="#">Быстрый просмотр</a>
 		  </li>
 		  <li>
 		    <a href="#">
@@ -125,7 +125,7 @@
 			  </figure>
 			  <p>375&#8381;<span>/кг</span></p>
 			</a>
-			<button>Быстрый просмотр</button>
+			<a href="#">Быстрый просмотр</a>
 		  </li>
 		  <li>
 		    <a href="#">
@@ -135,7 +135,7 @@
 			  </figure>
 			  <p>320&#8381;<span>/кг</span></p>
 			</a>
-			<button>Быстрый просмотр</button>
+			<a href="#">Быстрый просмотр</a>
 		  </li>
 		  <li>
 		    <a href="#">
@@ -145,7 +145,7 @@
 			  </figure>
 			  <p>440&#8381;<span>/кг</span></p>
 			</a>
-			<button>Быстрый просмотр</button>
+			<a href="#">Быстрый просмотр</a>
 		  </li>
 		  <li>
 		    <a href="#">
@@ -155,7 +155,7 @@
 			  </figure>
 			  <p>435&#8381;<span>/кг</span></p>
 			</a>
-			<button>Быстрый просмотр</button>
+			<a href="#">Быстрый просмотр</a>
 		  </li>
 		  <li>
 		    <a href="#">
@@ -165,7 +165,7 @@
 			  </figure>
 			  <p>355&#8381;<span>/кг</span></p>
 			</a>
-			<button>Быстрый просмотр</button>
+			<a href="#">Быстрый просмотр</a>
 		  </li>
 		  <li>
 		    <a href="#">
@@ -175,7 +175,7 @@
 			  </figure>
 			  <p>420&#8381;<span>/кг</span></p>
 			</a>
-			<button>Быстрый просмотр</button>
+			<a href="#">Быстрый просмотр</a>
 		  </li>
 		</ul>
 	  </section>
@@ -188,13 +188,52 @@
 		<li><a href="#">4</a></li>
 		<li><a href="#">></a></li>
       </ul>
+	  	  	  
+	  <section class="visually-hidden">
+	    <h2 class="visually-hidden">Корзина</h2>
+		<form oninput="result.value = 750" action="https://echo.htmlacademy.ru" method="post">
+		  <ul>
+		    <li>
+			  <button type="button">Закрыть</button>
+			  <img src="img/ice-11.png" width="33" height="33" alt="фото-превью мороженого">
+			  <label class="visually-hidden" for="id-name-ice-11">Название мороженого</label>
+			  <textarea name="name-ice-11" id="id-name-ice-11" cols="50" rows="2" readonly>Сливочное с апельсиновым джемом и цитрусовой стружкой</textarea>
+			  <label class="visually-hidden" for="id-weight-ice-11">Вес мороженого</label>
+			  <input type="number" name="weight-ice-11" id="id-weight-ice-11" value="1.5" readonly>
+			  <span>кг х</span>
+			  <label class="visually-hidden" for="id-price-ice-11">Цена мороженого</label>
+			  <input type="number" name="price-ice-11" id="id-price-ice-11" value="200" readonly>
+              <label class="visually-hidden" for="id-summa-ice-11">Сумма мороженого</label>
+			  <input type="number" name="summa-ice-11" id="id-summa-ice-11" value="300" readonly>			  			  
+			</li>
+			<li>
+			  <button type="button">Закрыть</button>
+			  <img src="img/ice-33.png" width="33" height="33" alt="фото-превью мороженого">
+			  <label class="visually-hidden" for="id-name-ice-13">Название мороженого</label>
+			  <textarea name="name-ice-13" id="id-name-ice-13" cols="50" rows="2" readonly>Клубничный пломбир с присыпкой из белого шоколада</textarea>
+			  <label class="visually-hidden" for="id-weight-ice-13">Вес мороженого</label>
+			  <input type="number" name="weight-ice-13" id="id-weight-ice-13" value="1.5" readonly>
+			  <span>кг х</span>
+			  <label class="visually-hidden" for="id-price-ice-13">Цена мороженого</label>
+			  <input type="number" name="price-ice-13" id="id-price-ice-13" value="300" readonly>
+              <label class="visually-hidden" for="id-summa-ice-13">Сумма мороженого</label>
+			  <input type="number" name="summa-ice-13" id="id-summa-ice-13" value="400" readonly>		  
+			</li>
+		  </ul>
+		  <div><label class="visually-hidden" for="id-result">Сумма мороженого</label>
+		        Итого <output name="result" id="id-result">0</output> руб
+		  </div>
+          <button type="submit">Оформить заказ</button>  		  
+		</form>		
+	  </section>
+	
 	</main>
 	
 	<footer>
 	  <section>
 	    <ul>
 	      <li><a href="#">Твитер</a></li>
-		  <li><a href>Инстаграм</a></li>
+		  <li><a href="#">Инстаграм</a></li>
 		  <li><a href="#">Фейсбук</a></li>
 		  <li><a href="#">В контакте</a></li>
 	    </ul>
