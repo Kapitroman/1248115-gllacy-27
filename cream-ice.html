@@ -9,6 +9,18 @@
 	  body {
 	    background-color: #849d8f;
 	  }
+	  
+	  .tableContainer {
+	    display: table;
+	  }
+	  
+	  .tableRow {
+	    display: table-row;
+	  }
+	  
+	  .tableCell {
+	    display: table-cell;
+	  }
 	</style>
   </head>
   <body>
@@ -32,9 +44,102 @@
           <li><a href="#">О компании</a></li>
         </ul>
 		<ul>
-		  <li><a href="#"></a></li>
-		  <li><a href="#">Вход</a></li>
-		  <li><a href="#">2 товара</a></li>
+          <li>
+		    <a href="#"></a>
+			<section class="visually-hidden">
+	          <h2 class="visually-hidden">Поиск</h2>
+		      <form action="https://echo.htmlacademy.ru" method="get">
+		        <p>
+		          <label class="visually-hidden" for="search-id">Поиск</label>
+		          <input type="search" name="search" id="search-id" placeholder="Крем-брюле">
+		        </p>  
+		      </form>
+	        </section>
+		  </li>
+		  <li>
+		    <a href="#">Вход</a>
+			<section class="visually-hidden">
+	          <h2 class="visually-hidden">Вход в личный кабинет</h2>
+		      <form action="https://echo.htmlacademy.ru" method="post">
+		        <p>
+		          <label class="visually-hidden" for="login-email-id">E-mail</label>
+		          <input type="email" name="login-email" id="login-email-id" placeholder="email@example.com">
+		        </p>
+		        <p>
+		          <label class="visually-hidden" for="password-id">Пароль</label>
+		          <input type="password" name="password" id="password-id" placeholder="пароль">
+		        </p> 
+                <p>
+		          <a href="#">Забыли пароль</a> <br>
+			      <a href="#">Новая регистрация</a>
+		        </p>
+                <button type="submit">Войти</button>  		  
+		      </form>		
+	        </section>
+		  </li>
+		  <li>
+		    <a href="#">2 товара</a>
+			<section class="visually-hidden">
+	          <h2 class="visually-hidden">Корзина</h2>
+		      <form oninput="result.value = 750" action="https://echo.htmlacademy.ru" method="post">
+		        <div class="tableContainer">
+		          <div class="tableRow">
+			        <div class="tableCell">
+			          <button type="button">Закрыть</button>
+                    </div>
+                    <div class="tableCell">
+			          <img src="img/ice-11.png" width="33" height="33" alt="фото-превью мороженого">
+                    </div>
+                    <div class="tableCell">
+			          Сливочное с апельсиновым джемом и цитрусовой стружкой
+				      <input type="hidden" name="name-ice-11" value="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                    </div>
+                    <div class="tableCell">
+			          1,5кг х 200руб
+			  	      <input type="hidden" name="weight-ice-11" value="1.5">
+			  	      <input type="hidden" name="price-ice-11" value="200">
+                    </div>
+                    <div class="tableCell">
+			          300руб
+				      <input type="hidden" name="summa-ice-11" value="300">
+                    </div>
+			      </div>
+                  <div class="tableRow">
+			        <div class="tableCell">
+			          <button type="button">Закрыть</button>
+                    </div>
+                    <div class="tableCell">
+			          <img src="img/ice-13.png" width="33" height="33" alt="фото-превью мороженого">
+                    </div>
+                    <div class="tableCell">
+			          Клубничный пломбир с присыпкой из белого шоколада
+				      <input type="hidden" name="name-ice-13" value="Клубничный пломбир с присыпкой из белого шоколада">
+                    </div>
+                    <div class="tableCell">
+			          1,5кг х 300руб
+				      <input type="hidden" name="weight-ice-13" value="1.5">
+				      <input type="hidden" name="price-ice-13" value="300">
+                    </div>
+                    <div class="tableCell">
+			          450руб
+				      <input type="hidden" name="summa-ice-13" value="450">
+                    </div>			  
+			      </div>
+			      <div class="tableRow">
+			        <div class="tableCell">
+			          Итого 750 руб
+				      <input type="hidden" name="result" value="750">
+			        </div>
+                  </div>
+			      <div class="tableRow">
+			        <div class="tableCell">
+			          <button type="submit">Оформить заказ</button> 
+			        </div>
+                  </div>
+		        </div>
+	          </form>
+	        </section>
+		  </li>
 		</ul>
 	  </nav>
 	  <p>
@@ -52,7 +157,75 @@
 	  
 	  <h1>Сливочное мороженое</h1>
 	  
-      <!-- здесь будет форма фильтра -->
+	  <section>
+	    <h2 class="visually-hidden">Фильтры выбора мороженого</h2>
+	    <form action="https://echo.htmlacademy.ru" method="get">
+		  <div>
+		  <p>Сортировка:</p>
+		    <label class="visually-hidden" for="id-sorter">Сортировка</label>
+		    <select name="sorter" id="id-sorter">
+			  <option value="popularity">по популярности</option>
+			  <option value="cheap first">сначала недорогие</option>
+			  <option value="expensive first">сначала дорогие</option>
+			  <option value="fat">по жирности</option>
+			<select>
+		  </div>	
+		  <div>	
+		    <p>Цена: 100 руб. – 500 руб.</p>
+		    <label class="visually-hidden" for="id-range">Цена</label>
+            <input type="range" name="range" id="id-range" min="0" step="5" max="800" value="100">
+          </div>
+		  <div>
+		    <p>Жирность:</p>
+			<ul>
+			  <li>
+				<input type="radio" name="fat-group" value="0" id="id-fat-0">
+				<label for="id-fat-0">0%</label>
+              </li>
+			  <li>
+				<input type="radio" name="fat-group" value="before-10" id="id-before-10" checked>
+				<label for="id-before-10">до 10%</label>
+              </li>
+			  <li>
+				<input type="radio" name="fat-group" value="before-30" id="id-before-30">
+				<label for="id-before-30">до 30%</label>
+              </li>
+			  <li>
+				<input type="radio" name="fat-group" value="more-30" id="id-more-30">
+				<label for="id-more-30">выше 30%</label>
+              </li>
+		    </ul> 
+          </div>
+		   <div>
+		    <p>Наполнители:</p>
+			<ul>
+			  <li>
+				<input type="checkbox" name="chocolate" id="id-chocolate" checked>
+				<label for="id-chocolate">шоколадные</label>
+              </li>
+			  <li>
+				<input type="checkbox" name="sugar" id="id-sugar" checked>
+				<label for="id-sugar">сахарные присыпки</label>
+              </li>
+			  <li>
+				<input type="checkbox" name="fruits" id="id-fruits">
+				<label for="id-fruits">фрукты</label>
+              </li>
+			  <li>
+				<input type="checkbox" name="syrups" id="id-syrups">
+				<label for="id-syrups">сиропы</label>
+              </li>
+			  <li>
+				<input type="checkbox" name="jams" id="id-jams">
+				<label for="id-jams">джемы</label>
+              </li>
+		    </ul> 
+          </div>
+		  <div>  
+            <button type="submit">Применить</button> 
+          </div> 		  
+		</form>		  
+	  </section>
 	   
 	  <section>
 	    <h2 class="visually-hidden">Каталог мороженого</h2>
@@ -188,45 +361,7 @@
 		<li><a href="#">4</a></li>
 		<li><a href="#">></a></li>
       </ul>
-	  	  	  
-	  <section class="visually-hidden">
-	    <h2 class="visually-hidden">Корзина</h2>
-		<form oninput="result.value = 750" action="https://echo.htmlacademy.ru" method="post">
-		  <ul>
-		    <li>
-			  <button type="button">Закрыть</button>
-			  <img src="img/ice-11.png" width="33" height="33" alt="фото-превью мороженого">
-			  <label class="visually-hidden" for="id-name-ice-11">Название мороженого</label>
-			  <textarea name="name-ice-11" id="id-name-ice-11" cols="50" rows="2" readonly>Сливочное с апельсиновым джемом и цитрусовой стружкой</textarea>
-			  <label class="visually-hidden" for="id-weight-ice-11">Вес мороженого</label>
-			  <input type="number" name="weight-ice-11" id="id-weight-ice-11" value="1.5" readonly>
-			  <span>кг х</span>
-			  <label class="visually-hidden" for="id-price-ice-11">Цена мороженого</label>
-			  <input type="number" name="price-ice-11" id="id-price-ice-11" value="200" readonly>
-              <label class="visually-hidden" for="id-summa-ice-11">Сумма мороженого</label>
-			  <input type="number" name="summa-ice-11" id="id-summa-ice-11" value="300" readonly>			  			  
-			</li>
-			<li>
-			  <button type="button">Закрыть</button>
-			  <img src="img/ice-33.png" width="33" height="33" alt="фото-превью мороженого">
-			  <label class="visually-hidden" for="id-name-ice-13">Название мороженого</label>
-			  <textarea name="name-ice-13" id="id-name-ice-13" cols="50" rows="2" readonly>Клубничный пломбир с присыпкой из белого шоколада</textarea>
-			  <label class="visually-hidden" for="id-weight-ice-13">Вес мороженого</label>
-			  <input type="number" name="weight-ice-13" id="id-weight-ice-13" value="1.5" readonly>
-			  <span>кг х</span>
-			  <label class="visually-hidden" for="id-price-ice-13">Цена мороженого</label>
-			  <input type="number" name="price-ice-13" id="id-price-ice-13" value="300" readonly>
-              <label class="visually-hidden" for="id-summa-ice-13">Сумма мороженого</label>
-			  <input type="number" name="summa-ice-13" id="id-summa-ice-13" value="400" readonly>		  
-			</li>
-		  </ul>
-		  <div><label class="visually-hidden" for="id-result">Сумма мороженого</label>
-		        Итого <output name="result" id="id-result">0</output> руб
-		  </div>
-          <button type="submit">Оформить заказ</button>  		  
-		</form>		
-	  </section>
-	
+	  	  	  	
 	</main>
 	
 	<footer>
