@@ -46,7 +46,7 @@
 		<ul>
           <li>
 		    <a href="#"></a>
-			<section class="visually-hidden">
+			<section>
 	          <h2 class="visually-hidden">Поиск</h2>
 		      <form action="https://echo.htmlacademy.ru" method="get">
 		        <p>
@@ -58,7 +58,7 @@
 		  </li>
 		  <li>
 		    <a href="#">Вход</a>
-			<section class="visually-hidden">
+			<section>
 	          <h2 class="visually-hidden">Вход в личный кабинет</h2>
 		      <form action="https://echo.htmlacademy.ru" method="post">
 		        <p>
@@ -79,13 +79,13 @@
 		  </li>
 		  <li>
 		    <a href="#">2 товара</a>
-			<section class="visually-hidden">
+			<section>
 	          <h2 class="visually-hidden">Корзина</h2>
 		      <form oninput="result.value = 750" action="https://echo.htmlacademy.ru" method="post">
 		        <div class="tableContainer">
 		          <div class="tableRow">
 			        <div class="tableCell">
-			          <button type="button">Закрыть</button>
+			          <button type="button">Удалить товар</button>
                     </div>
                     <div class="tableCell">
 			          <img src="img/ice-11.png" width="33" height="33" alt="фото-превью мороженого">
@@ -106,7 +106,7 @@
 			      </div>
                   <div class="tableRow">
 			        <div class="tableCell">
-			          <button type="button">Закрыть</button>
+			          <button type="button">Удалить товар</button>
                     </div>
                     <div class="tableCell">
 			          <img src="img/ice-13.png" width="33" height="33" alt="фото-превью мороженого">
@@ -160,70 +160,46 @@
 	  <section>
 	    <h2 class="visually-hidden">Фильтры выбора мороженого</h2>
 	    <form action="https://echo.htmlacademy.ru" method="get">
-		  <div>
-		  <p>Сортировка:</p>
+		  <fieldset>
+		    <legend>Сортировка:</legend>
 		    <label class="visually-hidden" for="id-sorter">Сортировка</label>
 		    <select name="sorter" id="id-sorter">
 			  <option value="popularity">по популярности</option>
 			  <option value="cheap first">сначала недорогие</option>
 			  <option value="expensive first">сначала дорогие</option>
 			  <option value="fat">по жирности</option>
-			<select>
-		  </div>	
-		  <div>	
-		    <p>Цена: 100 руб. – 500 руб.</p>
+			</select>
+		  </fieldset>	
+		  <fieldset>	
+		    <legend>Цена: 100 руб. – 500 руб.</legend>
 		    <label class="visually-hidden" for="id-range">Цена</label>
-            <input type="range" name="range" id="id-range" min="0" step="5" max="800" value="100">
-          </div>
-		  <div>
-		    <p>Жирность:</p>
-			<ul>
-			  <li>
-				<input type="radio" name="fat-group" value="0" id="id-fat-0">
-				<label for="id-fat-0">0%</label>
-              </li>
-			  <li>
-				<input type="radio" name="fat-group" value="before-10" id="id-before-10" checked>
-				<label for="id-before-10">до 10%</label>
-              </li>
-			  <li>
-				<input type="radio" name="fat-group" value="before-30" id="id-before-30">
-				<label for="id-before-30">до 30%</label>
-              </li>
-			  <li>
-				<input type="radio" name="fat-group" value="more-30" id="id-more-30">
-				<label for="id-more-30">выше 30%</label>
-              </li>
-		    </ul> 
-          </div>
-		   <div>
-		    <p>Наполнители:</p>
-			<ul>
-			  <li>
-				<input type="checkbox" name="chocolate" id="id-chocolate" checked>
-				<label for="id-chocolate">шоколадные</label>
-              </li>
-			  <li>
-				<input type="checkbox" name="sugar" id="id-sugar" checked>
-				<label for="id-sugar">сахарные присыпки</label>
-              </li>
-			  <li>
-				<input type="checkbox" name="fruits" id="id-fruits">
-				<label for="id-fruits">фрукты</label>
-              </li>
-			  <li>
-				<input type="checkbox" name="syrups" id="id-syrups">
-				<label for="id-syrups">сиропы</label>
-              </li>
-			  <li>
-				<input type="checkbox" name="jams" id="id-jams">
-				<label for="id-jams">джемы</label>
-              </li>
-		    </ul> 
-          </div>
-		  <div>  
-            <button type="submit">Применить</button> 
-          </div> 		  
+            <input type="range" name="range" id="id-range" min="100" step="5" max="500" value="100">
+          </fieldset>
+		  <fieldset>
+		    <legend>Жирность:</legend>
+			  <input type="radio" name="fat-group" value="0" id="id-fat-0">
+			  <label for="id-fat-0">0%</label>             
+			  <input type="radio" name="fat-group" value="before-10" id="id-before-10" checked>
+			  <label for="id-before-10">до 10%</label>            
+			  <input type="radio" name="fat-group" value="before-30" id="id-before-30">
+			  <label for="id-before-30">до 30%</label>             
+			  <input type="radio" name="fat-group" value="more-30" id="id-more-30">
+			  <label for="id-more-30">выше 30%</label>
+          </fieldset>
+		  <fieldset>
+		    <legend>Наполнители:</legend>			
+			  <input type="checkbox" name="chocolate" id="id-chocolate" checked>
+			  <label for="id-chocolate">шоколадные</label>            
+			  <input type="checkbox" name="sugar" id="id-sugar" checked>
+			  <label for="id-sugar">сахарные присыпки</label>             
+			  <input type="checkbox" name="fruits" id="id-fruits">
+			  <label for="id-fruits">фрукты</label>             
+			  <input type="checkbox" name="syrups" id="id-syrups">
+			  <label for="id-syrups">сиропы</label>             
+			  <input type="checkbox" name="jams" id="id-jams">
+			  <label for="id-jams">джемы</label>             
+          </fieldset>		    
+          <button type="submit">Применить</button> 		  
 		</form>		  
 	  </section>
 	   
