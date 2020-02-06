@@ -1,0 +1,514 @@
+/* Шрифты */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto.woff2") format("woff2"),
+       url("../fonts/roboto.woff") format("woff");      
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+       url("../fonts/robotomedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+       url("../fonts/robotobold.woff") format("woff");
+}
+
+
+/* Глобальные */
+
+body {
+  font-family: "Roboto", "Verdana", sans-serif;
+  background-color: #849d8f;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+/*Ссылки по стайлгайду не меню*/
+
+a {
+  text-decoration: none;  	
+}
+
+.text-ref-gray:link,
+.text-ref-gray:visited {
+  color: #ffffff; 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);	
+}
+
+.text-ref-gray:hover,
+.text-ref-gray:focus,
+.text-ref-gray:active {
+  color: #ffbc9e; 
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);	
+}
+
+.text-ref-white:link,
+.text-ref-white:visited {
+  color: #323232; 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);	
+}
+
+.text-ref-white:hover,
+.text-ref-white:focus,
+.text-ref-white:active {
+  color: #e84d37; 
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);	
+}
+
+
+/*Кнопки по стайлгайду */
+
+.button {
+  background-color: #ef6140;
+  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.7);
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76); 
+}
+
+.button:hover,
+.button:focus {
+  background-image: linear-gradient( 90deg, rgb(236,111,94) 0%, rgb(245,134,105) 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.7);
+}
+
+.button:active {
+  background-image: linear-gradient( 90deg, rgb(225,97,62) 0%, rgb(215,70,50) 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.7);
+  color: #fceeec; 
+}
+
+
+/*Форма по стайл гайду*/
+
+input {
+  background-color: #ffffff;
+  border: 1px solid #b2b2b2; 
+}
+
+input:hover {
+  border: 2px solid #9a9a9a; 
+}
+
+input:focus {
+  border: 2px solid #2e88e4; 
+}
+
+
+/* header */
+
+.main-navigation ul {
+  list-style: none;
+}
+
+.site-navigation {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;  	
+}
+
+.site-navigation a:link,
+.site-navigation a:visited {
+  color: #ffffff; 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  background-color: #f8f7f4;
+  color: #323232;
+}
+
+.site-navigation a:active {
+  background-color: #f8f7f4;
+  color: #323232;
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.7)
+}
+
+li:hover .sub-navigation {
+  display: block;	
+}
+
+.sub-navigation {
+  display: none;
+  background-color: #f8f7f4;  
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.sub-navigation a:link,
+.sub-navigation a:visited {
+  color: #323232;	
+}
+
+.sub-navigation a:hover,
+.sub-navigation a:focus {
+  background-color: #fbded7;	
+}
+
+.sub-navigation a:active {
+  background-color: #f6b5a5;	
+}
+
+.sub-navigation li:first-child > a {
+ font-weight: 700;
+ border-bottom: 1px solid rgba(0, 0, 0, 0.2); 
+}
+
+.on-page {
+  background-color: #d07058;
+  color: #ffffff;  
+}
+
+.user-navigation {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;  	
+}
+
+.user-navigation a:link,
+.user-navigation a:visited {
+  background-color: #9db1a5;
+  color: #ffffff;  
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus {
+  background-color: #f8f7f4; 
+  color: #323232;  
+}
+
+.search-link {
+  font-size: 0;	
+}
+
+.search-link:link,
+.search-link:visited {
+  background-image: url("../img/loupe.svg");
+  background-repeat: no-repeat;  
+}
+
+.search-link:hover,
+.search-link:focus {
+  background-image: url("../img/loupe-active.svg");
+  background-repeat: no-repeat;  
+}
+
+li:hover .search-form {
+  display: block;	
+}
+
+.search-form {
+  display: none;	
+}
+
+.login-link:link,
+.login-link:visited {
+  background-image: url("../img/entrance.svg");
+  background-repeat: no-repeat;  
+}
+
+.login-link:hover,
+.login-link:focus {
+  background-image: url("../img/entrance-active.svg");
+  background-repeat: no-repeat;  
+}
+
+li:hover .entrance-form {
+  display: block;	
+}
+
+.entrance-form {
+  display: none;	
+}
+
+.basket-link.nothing:link,
+.basket-link.nothing:visited {
+  background-image: url("../img/basket.svg");
+  background-repeat: no-repeat;  
+}
+
+.basket-link.nothing:hover,
+.basket-link.nothing:focus {
+  background-image: url("../img/basket-black.svg");
+  background-repeat: no-repeat;  
+}
+
+.basket-link:link,
+.basket-link:visited {
+  background-image: url("../img/basket-red-white.svg");
+  background-repeat: no-repeat;
+}
+
+.basket-link:hover,
+.basket-link:focus {
+  background-image: url("../img/basket-red.svg");
+  background-repeat: no-repeat;  
+}
+
+li:hover .basket-form {
+  display: block;	
+}
+
+.basket-form {
+  display: none;	
+}
+
+.contacts {
+  color: #ffffff;
+  font-weight: 700; 
+  text-align: right;	
+}
+
+.contacts span {
+  font-size: 14px;
+  line-height: 16px; 	
+}
+
+.contacts span:last-child {
+  font-size: 22px;
+  line-height: 24px;	
+}
+
+
+/*Навигация cream-ice.html*/
+
+.cream-ice {
+  color: #ffffff; 	
+}
+
+.cream-ice h1 {
+ font-size: 35px;
+ line-height: 41px;
+ font-weight: 700;
+}
+
+.breadcrumbs {
+  list-style: none;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;  
+}
+
+.pagination {
+  display: none;	
+}
+
+
+/* Слайдер */
+
+.slider {
+  display: none;	
+}
+
+
+/* Баннер*/
+
+.banner {
+  display: none;	
+}
+
+
+/*ХИТ*/
+
+.hits {
+  display: none;	
+}
+
+
+/*Магазин Глейси*/
+
+.about-gllacy {
+  background-color: eddfc5;
+  background-image: url("../img/waffle.jpg"); 
+  color: #323232;  
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px; 
+}
+
+.about-gllacy ul {
+  list-style: none;	
+}
+
+.about-gllacy p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px; 	
+}
+
+.ice-cream {
+  background-image: url("../img/ice-cream.svg");
+  background-repeat: no-repeat;
+}
+
+.eco {
+  background-image: url("../img/eco.svg");
+  background-repeat: no-repeat;	
+}
+
+.cow {
+  background-image: url("../img/cow.svg");
+  background-repeat: no-repeat;	 	
+}
+
+.thermometer {
+  background-image: url("../img/thermometer.svg");
+  background-repeat: no-repeat;	
+}
+
+
+/*Новое в нашем блоге*/
+
+.blog {
+  color: #323232;  
+  background-image: url("../img/strawberry-background.jpg");
+  background-repeat: no-repeat;	
+}
+
+.blog h1 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;	
+}
+
+.blog a {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-decoration: underline;  
+}
+
+
+/*Рассылка*/
+
+.subscription {
+  color: #5a5a5a;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;  
+  background-image: url("../img/bg-post.svg");
+  background-repeat: no-repeat;		
+}
+
+.substrate {
+  background-color: #f8f7f4	
+}
+
+
+/*Адрес*/
+
+.address {
+  display: none;	
+}
+
+
+/*Форма обратной связи*/
+
+.form-callback {
+  display: none;	
+}
+
+
+/*Фильтры cream-ice.html*/
+
+.filters {
+  display: none;	
+}
+
+
+/*Каталог cream-ice.html*/
+
+.catalog ul {
+  list-style: none;  	
+}
+
+.item-link {
+  color: #ffffff;	
+}
+
+.quick-look {
+  display: none;	
+}
+
+.catalog li:hover {
+  background-color: #9bafa3;	
+}
+
+li:hover .quick-look {
+  display: block;	
+}
+
+
+/*footer*/
+
+.main-footer ul {
+  list-style: none;	
+}
+
+.footer-social {
+  font-size: 0;	
+}
+
+.twitter {
+  background-image: url("../img/twitter.svg");
+  background-repeat: no-repeat;	
+}
+
+.fb {
+  background-image: url("../img/fb.svg");
+  background-repeat: no-repeat;	
+}
+
+.instagram {
+  background-image: url("../img/instagram.svg");
+  background-repeat: no-repeat;	
+}
+
+.vk {
+  background-image: url("../img/vk.svg");
+  background-repeat: no-repeat;		
+}
+
+
+.info-production a {
+  font-size: 13px;
+  line-height: 16px; 
+}
+
+.info-production .for-suppliers {
+  background-image:	url("../img/heart.svg");
+  background-repeat: no-repeat;
+  font-weight: 700;  
+}
+
+.footer-copyright {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 18px; 	
+}
