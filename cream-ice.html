@@ -29,10 +29,35 @@
 		<ul>
         <ul class="user-navigation">
 		  <li>
-		    <a class="search-link" href="search.html">Поиск</a>
+		    <a class="search-link" href="search.html"><span class="visually-hidden">Поиск</span></a>
+			<div class="search-form">
+		      <form action="https://echo.htmlacademy.ru" method="get">
+		        <p>
+		          <label class="visually-hidden" for="search-id">Поиск</label>
+		          <input type="search" name="search" id="search-id" placeholder="Крем-брюле">
+		        </p>  
+		      </form>
+	        </div>
 		  </li>
 		  <li>
 		    <a class="login-link" href="login.html">Вход</a>
+			<div class="entrance-form">
+		      <form action="https://echo.htmlacademy.ru" method="post">
+		        <p>
+		          <label class="visually-hidden" for="login-email-id">E-mail</label>
+		          <input type="email" name="login-email" id="login-email-id" placeholder="email@example.com">
+		        </p>
+		        <p>
+		          <label class="visually-hidden" for="password-id">Пароль</label>
+		          <input type="password" name="password" id="password-id" placeholder="пароль">
+		        </p> 
+                <p>
+		          <a href="#">Забыли пароль</a> <br>
+			      <a href="#">Новая регистрация</a>
+		        </p>
+                <button type="submit">Войти</button>  		  
+		      </form>		
+	        </div>
 		  </li>
 		  <li>
 		    <a class="basket-link" href="#">2 товара</a>
@@ -324,10 +349,10 @@
 	  <section class="footer-social">
 	    <h2 class="visually-hidden">Социальные сети</h2>
 	    <ul>
-	      <li><a class="twitter" href="#">Твитер</a></li>
-		  <li><a class="instagram" href="#">Инстаграм</a></li>
-		  <li><a class="fb" href="#">Фейсбук</a></li>
-		  <li><a class="vk" href="#">В контакте</a></li>
+	      <li><a class="twitter" href="#"><span class="visually-hidden">Твитер</span></a></li>
+		  <li><a class="instagram" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+		  <li><a class="fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+		  <li><a class="vk" href="#"><span class="visually-hidden">В контакте</span></a></li>
 	    </ul>
 	  </section>
 	  <section class="info-production">

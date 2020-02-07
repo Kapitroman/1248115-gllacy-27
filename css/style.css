@@ -199,9 +199,9 @@ li:hover .sub-navigation {
   color: #323232;  
 }
 
-.search-link {
+/*.search-link {
   font-size: 0;   
-}
+}*/
 
 .search-link::before {
   content: url("../img/loupe.svg");
@@ -452,9 +452,9 @@ li:hover .quick-look {
 
     /*Социальные сети*/
 
-.footer-social {
+/*.footer-social {
   font-size: 0;	
-}
+}*/
 
 .twitter::before {
   content: url("../img/twitter-usually.png");
