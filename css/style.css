@@ -689,7 +689,7 @@ li:hover .quick-look {
   border-radius: 13px;
 }
 
-.pagination a:hover {
+.pagination a:hover:not(.left-arrow) {
   background-color: rgba(255, 255, 255, 0.2);  	
 }
 
