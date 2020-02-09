@@ -80,6 +80,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76); 
+  text-decoration: none;
 }
 
 .button:hover,
@@ -99,7 +100,7 @@ body {
 
 input {
   background-color: #ffffff;
-  border: 1px solid #b2b2b2; 
+  border: 1px solid #b2b2b2;  
 }
 
 input:hover {
@@ -112,6 +113,8 @@ input:focus {
 
 
 /* header */
+
+  /*Навигация по сайту*/
 
 .main-navigation ul {
   list-style: none;
@@ -176,32 +179,32 @@ li:hover .sub-navigation {
   color: #ffffff;  
 }
 
+  /*Пользовательская навигация*/
+
 .user-navigation {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;  	
 }
 
-.user-navigation a {
+.user-navigation a:not(.text-ref-white) {
   display: inline-block;
   padding: 10px 16px; 
 }
 
-.user-navigation a:link,
-.user-navigation a:visited {
+.user-navigation a:link:not(.text-ref-white),
+.user-navigation a:visited:not(.text-ref-white) {
   background-color: #9db1a5;
   color: #ffffff;  
 }
 
-.user-navigation a:hover,
-.user-navigation a:focus {
+.user-navigation a:hover:not(.text-ref-white),
+.user-navigation a:focus:not(.text-ref-white) {
   background-color: #f8f7f4; 
   color: #323232;  
 }
 
-/*.search-link {
-  font-size: 0;   
-}*/
+  /*Поиск*/
 
 .search-link::before {
   content: url("../img/loupe.svg");
@@ -220,6 +223,8 @@ li:hover .search-form {
   display: none;	
 }
 
+  /*Личный кабинет*/
+
 .login-link::before {
   content: url("../img/entrance.svg"); 
 }
@@ -236,6 +241,8 @@ li:hover .entrance-form {
 .entrance-form {
   display: none;	
 }
+
+  /*Корзина*/
 
 .nothing::before {
   content: url("../img/basket.svg");
@@ -263,6 +270,8 @@ li:hover .basket-form {
   display: none;	
 }
 
+  /*Контакты справа*/
+
 .contacts {
   color: #ffffff;
   font-weight: 700; 
@@ -279,51 +288,132 @@ li:hover .basket-form {
   line-height: 24px;	
 }
 
+/*Поп-окна*/
 
-/*Навигация cream-ice.html*/
+/*Поиск поп-окно*/
 
-.cream-ice {
-  color: #ffffff; 	
+.search-form {
+  background-color: #f8f7f4;	
 }
 
-.cream-ice h1 {
- font-size: 35px;
- line-height: 41px;
- font-weight: 700;
+/*Вход в личный кабинет поп окно*/
+
+.entrance-form {
+  background-color: #f8f7f4;
 }
 
-.breadcrumbs {
-  list-style: none;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 400;  
+.entrance-form .text-ref-white {
+  font-weight: 400;
 }
 
-.pagination {
-  display: none;	
+/*Корзина-поп-окно*/
+
+.basket-form {
+  background-color: #f8f7f4;
+  font-size: 13px;
+  line-height: 16px; 
+  font-weight: 400; 
+  color: #323232;  
 }
 
-
-/* Слайдер */
-
-.slider {
-  display: none;	
+.tableContainer {
+  display: table;
 }
 
+.tableRow {
+  display: table-row;
+}
 
-/* Баннер*/
+.tableCell {
+  display: table-cell;	
+}
 
+.tableCell span {
+  color: #999999;	
+}
+
+.tableCell.summa {
+  font-size: 15px;
+  line-height: 18px; 
+  font-weight: 700;  	
+}
+
+.del {
+  border: none;
+  background-color: transparent;  
+}
+
+.del::before {
+  content: url("../img/cross-big.svg");	
+}
+
+/*Содержимое index.html*/
+
+  /* Слайдер */
+
+.slider ul {
+  list-style: none;	
+  text-align: center;
+}
+
+.slider-caption {
+  font-size: 60px;
+  line-height: 61px;
+  font-weight: 700;
+  color: #ffffff;  
+}
+
+.slider .button {
+  font-size: 32px;	
+}
+
+.slider-browser.current::before {
+  content: url("../img/slider-browser-current.png");
+}
+
+.slider-browser::before {
+  content: url("../img/slider-browser-other.png");  
+}
+
+  /* Баннер*/
+  
 .banner {
-  display: none;	
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 22px;   
+}
+
+.banner h3 {
+  font-size: 35px;
+  line-height: 41px;  
+}
+
+.strawberry {
+  background-color: #c51c48;
+  background-image: url("../img/strawberry.jpg");
+  
+}
+
+.chocolate {
+  background-color: #7a5444;
+  background-image: url("../img/chocolate.jpg");	
 }
 
 
-/*ХИТ*/
+  /*ХИТ*/
 
-.hits {
-  display: none;	
+.hits ul{
+  list-style: none;	
 }
 
+.hits li:hover {
+  background-color: #9bafa3;	
+}
+
+.hits figure::before {
+  content: url("../img/hit.svg");  	
+}
 
 /*Магазин Глейси*/
 
@@ -403,9 +493,22 @@ li:hover .basket-form {
 /*Адрес*/
 
 .address {
-  display: none;	
+  background-color: #f7f1d9;
 }
 
+.big-address {
+  background-color: #fdfefe;
+  color: #323232; 
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;   
+}
+
+.big-address span {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;  	
+}
 
 /*Форма обратной связи*/
 
@@ -414,14 +517,134 @@ li:hover .basket-form {
 }
 
 
-/*Фильтры cream-ice.html*/
+/*Страница содержимого cream-ice.html*/
 
-.filters {
-  display: none;	
+  /*Хлебные крошки и заголовок*/
+
+.breadcrumbs {
+  list-style: none;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;  
 }
 
+.cream-ice {
+  color: #ffffff; 	
+}
 
-/*Каталог cream-ice.html*/
+.cream-ice h1 {
+ font-size: 35px;
+ line-height: 41px;
+ font-weight: 700;
+}
+
+  /*Фильтры cream-ice.html*/
+  
+.filters fieldset {
+  border: none;   
+}
+
+.filters legend {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;  
+}
+
+.field-container {
+  font-size: 16px;
+  line-height: 32px;
+  background-color: #a8b9b0;
+  height: 36px;
+  font-weight: 500;  
+}
+
+.field-select {
+  width: 195px;
+  overflow: hidden; 
+}
+
+.filters select {
+  background-color: #a8b9b0;
+  border: none;
+  /*vertical-align: middle;*/
+  width: 215px;
+  color: #ffffff;
+  font-weight: 500;
+  background-image: url("../img/icon-down-dir.png");
+  background-repeat: no-repeat;
+  background-position: 170px 50%;
+}
+
+.filters select:hover {
+  color: #323232;
+  background-image: url("../img/icon-down-dir-hover.png");
+  background-repeat: no-repeat;
+  background-position: 170px 50%;
+}
+
+.filters input[type="radio"] {
+  display: none; 	
+}
+
+.filters input[type="radio"]:checked+label::before {
+  content: url("../img/radio-on.png"); 
+}
+
+.filters input[type="radio"]+label::before {
+  content: url("../img/radio-off.png"); 
+}
+
+.filters input[type="radio"]:checked+label:hover::before {
+  content: url("../img/radio-on-hover.png"); 
+}
+
+.filters input[type="radio"]+label:hover::before {
+  content: url("../img/radio-off-hover.png"); 
+}
+
+.filters input[type="checkbox"] {
+  display: none; 	
+}
+
+.filters input[type="checkbox"]:checked+label::before {
+  content: url("../img/checkbox-on.png");
+}
+
+.filters input[type="checkbox"]+label::before {
+  content: url("../img/checkbox-off.png"); 
+}
+
+.filters input[type="checkbox"]:checked+label:hover::before {
+  content: url("../img/checkbox-on-hover.png"); 
+}
+
+.filters input[type="checkbox"]+label:hover::before {
+  content: url("../img/checkbox-off-hover.png"); 
+}
+
+.filters button {
+  color: #ffffff;
+  background-color: #9cb0a4;
+  width: 144px;
+  height: 37px;	
+  border: 2px solid #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.filters button:hover {
+  color: #323232;
+  background-color: #fbfcfb;	
+}
+
+.filters button:active {
+  color: #323232;
+  background-color: #eaeaea;
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.7);  
+  border: none;
+}
+
+  /*Каталог cream-ice.html*/
 
 .catalog ul {
   list-style: none;  	
@@ -443,6 +666,53 @@ li:hover .quick-look {
   display: block;	
 }
 
+  /*Панагинация*/
+
+.pagination {
+  list-style: none;	
+}
+
+.pagination li {
+  display: inline-block;
+  text-align: center;	
+  line-height: 26px;
+}
+
+.pagination a {
+  display: block;
+  font-size: 16px;
+  width: 26px;
+  height: 26px;
+  color: #ffffff;
+  text-decoration: none; 
+  vertical-align: middle;
+  border-radius: 13px;
+}
+
+.pagination a:hover {
+  background-color: rgba(255, 255, 255, 0.2);  	
+}
+
+.pagination a:active {
+  color: #323232;
+  background-color: #ffffff;  	
+}
+
+a.current-pagination {
+  color: #323232;
+  background-color: #ffffff;   
+}
+
+.left-arrow::before {
+  content: url("../img/left-arrow.png");
+  vertical-align: middle;  
+}
+
+.right-arrow::before {
+  content: url("../img/right-arrow.png"); 
+  vertical-align: middle;  
+}
+
 
 /*footer*/
 
@@ -450,11 +720,7 @@ li:hover .quick-look {
   list-style: none;	
 }
 
-    /*Социальные сети*/
-
-/*.footer-social {
-  font-size: 0;	
-}*/
+  /*Социальные сети*/
 
 .twitter::before {
   content: url("../img/twitter-usually.png");
@@ -508,7 +774,7 @@ li:hover .quick-look {
   content: url("../img/vk-active.png");		
 }
 
-   /*ИНфо*/
+  /*ИНфо*/
 
 .info-production a {
   font-size: 13px;
@@ -523,7 +789,7 @@ li:hover .quick-look {
   content: url("../img/heart.svg");	
 }
 
- /*Копирайт*/
+  /*Копирайт*/
 
 .footer-copyright {
   color: #ffffff;

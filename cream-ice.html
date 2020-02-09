@@ -52,10 +52,10 @@
 		          <input type="password" name="password" id="password-id" placeholder="пароль">
 		        </p> 
                 <p>
-		          <a href="#">Забыли пароль</a> <br>
-			      <a href="#">Новая регистрация</a>
+		          <a class="text-ref-white" href="#">Забыли пароль</a> <br>
+			      <a class="text-ref-white" href="#">Новая регистрация</a>
 		        </p>
-                <button type="submit">Войти</button>  		  
+                <button class="button" type="submit">Войти</button>  		  
 		      </form>		
 	        </div>
 		  </li>
@@ -66,7 +66,7 @@
 		        <div class="tableContainer">
 		          <div class="tableRow">
 			        <div class="tableCell">
-			          <button type="button">Удалить товар</button>
+			          <button class="del" type="button"><span class="visually-hidden">Удалить товар</span></button>
                     </div>
                     <div class="tableCell">
 			          <img src="img/ice-11.png" width="33" height="33" alt="фото-превью мороженого">
@@ -76,7 +76,7 @@
 				      <input type="hidden" name="name-ice-11" value="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                     </div>
                     <div class="tableCell">
-			          1,5кг х 200руб
+			          1,5кг х <span>200руб</span>
 			  	      <input type="hidden" name="weight-ice-11" value="1.5">
 			  	      <input type="hidden" name="price-ice-11" value="200">
                     </div>
@@ -87,7 +87,7 @@
 			      </div>
                   <div class="tableRow">
 			        <div class="tableCell">
-			          <button type="button">Удалить товар</button>
+			          <button class="del" type="button"><span class="visually-hidden">Удалить товар</span></button>
                     </div>
                     <div class="tableCell">
 			          <img src="img/ice-13.png" width="33" height="33" alt="фото-превью мороженого">
@@ -97,7 +97,7 @@
 				      <input type="hidden" name="name-ice-13" value="Клубничный пломбир с присыпкой из белого шоколада">
                     </div>
                     <div class="tableCell">
-			          1,5кг х 300руб
+			          1,5кг х <span>300руб</span>
 				      <input type="hidden" name="weight-ice-13" value="1.5">
 				      <input type="hidden" name="price-ice-13" value="300">
                     </div>
@@ -107,14 +107,14 @@
                     </div>			  
 			      </div>
 			      <div class="tableRow">
-			        <div class="tableCell">
+			        <div class="tableCell summa">
 			          Итого 750 руб
 				      <input type="hidden" name="result" value="750">
 			        </div>
                   </div>
 			      <div class="tableRow">
 			        <div class="tableCell">
-			          <button type="submit">Оформить заказ</button> 
+			          <button class="button" type="submit">Оформить заказ</button> 
 			        </div>
                   </div>
 		        </div>
@@ -143,21 +143,26 @@
 	    <form action="https://echo.htmlacademy.ru" method="get">
 		  <fieldset>
 		    <legend>Сортировка:</legend>
-		    <label class="visually-hidden" for="id-sorter">Сортировка</label>
-		    <select name="sorter" id="id-sorter">
-			  <option value="popularity">по популярности</option>
-			  <option value="cheap first">сначала недорогие</option>
-			  <option value="expensive first">сначала дорогие</option>
-			  <option value="fat">по жирности</option>
-			</select>
+			<div class="field-container field-select">
+		      <label class="visually-hidden" for="id-sorter">Сортировка</label>
+		      <select name="sorter" id="id-sorter">
+			    <option value="popularity">по популярности</option>
+			    <option value="cheap first">сначала недорогие</option>
+			    <option value="expensive first">сначала дорогие</option>
+			    <option value="fat">по жирности</option>
+			  </select>
+			</div>
 		  </fieldset>	
-		  <fieldset>	
-		    <legend>Цена: 100 руб. – 500 руб.</legend>
-		    <label class="visually-hidden" for="id-range">Цена</label>
-            <input type="range" name="range" id="id-range" min="100" step="5" max="500" value="100">
+		  <fieldset>
+            <legend>Цена: 100 руб. – 500 руб.</legend>
+			<div class="field-container">		  		      
+		      <label class="visually-hidden" for="id-range">Цена</label>
+              <input type="range" name="range" id="id-range" min="100" step="5" max="500" value="100">
+			</div>
           </fieldset>
 		  <fieldset>
 		    <legend>Жирность:</legend>
+			<div class="field-container">
 			  <input type="radio" name="fat-group" value="0" id="id-fat-0">
 			  <label for="id-fat-0">0%</label>             
 			  <input type="radio" name="fat-group" value="before-10" id="id-before-10" checked>
@@ -166,9 +171,11 @@
 			  <label for="id-before-30">до 30%</label>             
 			  <input type="radio" name="fat-group" value="more-30" id="id-more-30">
 			  <label for="id-more-30">выше 30%</label>
+			  </div>
           </fieldset>
 		  <fieldset>
-		    <legend>Наполнители:</legend>			
+		    <legend>Наполнители:</legend>
+            <div class="field-container">			
 			  <input type="checkbox" name="chocolate" id="id-chocolate" checked>
 			  <label for="id-chocolate">шоколадные</label>            
 			  <input type="checkbox" name="sugar" id="id-sugar" checked>
@@ -178,7 +185,8 @@
 			  <input type="checkbox" name="syrups" id="id-syrups">
 			  <label for="id-syrups">сиропы</label>             
 			  <input type="checkbox" name="jams" id="id-jams">
-			  <label for="id-jams">джемы</label>             
+			  <label for="id-jams">джемы</label>
+            </div>			  
           </fieldset>		    
           <button type="submit">Применить</button> 		  
 		</form>		  
@@ -335,12 +343,13 @@
 	  </section>
 	  
 	  <ul class="pagination">
-        <li><a>1</a></li>
+	    <li><a class="left-arrow" href="#"><span class="visually-hidden"><</span></a></li>
+        <li><a class ="current-pagination">1</a></li>
         <li><a href="#">2</a></li>
         <li><a href="#">3</a></li>
         <li><a href="#">4</a></li>
-		<li><a href="#">4</a></li>
-		<li><a href="#">></a></li>
+		<li><a href="#">5</a></li>
+		<li><a class="right-arrow" href="#"><span class="visually-hidden">></span></a></li>
       </ul>
 	  	  	  	
 	</main>
