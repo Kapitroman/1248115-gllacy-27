@@ -82,7 +82,7 @@ body {
 /*Кнопки по стайлгайду */
 
 .button {
-  padding: 10px 22px;
+  padding: 12px 22px;
   border-radius: 25px;
   background-color: #ef6140;
   background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
@@ -93,6 +93,13 @@ body {
   line-height: 24px;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76); 
   text-decoration: none;
+}
+
+.button.big {
+  padding: 12px 42px;
+  border-radius: 45px;  
+  font-size: 32px;
+  line-height: 44px;  
 }
 
 .button:hover,
@@ -411,9 +418,14 @@ li:hover .basket-form {
 /*Содержимое index.html*/
 
   /* Слайдер */
+  
+.slider {
+  margin: 0 27px;
+}	
 
 .slider ul {
-  list-style: none;	
+  list-style: none;
+  padding: 0;  
   text-align: center;
 }
 
@@ -422,10 +434,6 @@ li:hover .basket-form {
   line-height: 61px;
   font-weight: 700;
   color: #ffffff;  
-}
-
-.slider .button {
-  font-size: 32px;	
 }
 
 .slider-browser.current::before {
@@ -439,21 +447,39 @@ li:hover .basket-form {
   /* Баннер*/
   
 .banner {
+  margin: 0 27px;
+}
+
+.wrap-banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 	
+}
+
+.banner-item {
+  width: 560px;
+  height: 229px;
+  border-radius: 10px;  
+}
+
+.banner-item h3 {
+  margin: 15px 20px;
+  color: #ffffff;
+  font-size: 35px;
+  line-height: 41px;   
+}
+
+.banner-item p {
   font-weight: 700;
   color: #ffffff;
   font-size: 18px;
-  line-height: 22px;   
-}
-
-.banner h3 {
-  font-size: 35px;
-  line-height: 41px;  
+  line-height: 22px;
+  padding: 5px 20px;  
 }
 
 .strawberry {
   background-color: #c51c48;
-  background-image: url("../img/strawberry.jpg");
-  
+  background-image: url("../img/strawberry.jpg");  
 }
 
 .chocolate {
@@ -461,16 +487,14 @@ li:hover .basket-form {
   background-image: url("../img/chocolate.jpg");	
 }
 
+.banner .button {
+  display: inline-block;
+  margin-top: 35px;
+  margin-bottom: 25px;  
+}
+
 
   /*ХИТ*/
-
-.hits ul{
-  list-style: none;	
-}
-
-.hits li:hover {
-  background-color: #9bafa3;	
-}
 
 .hits figure::before {
   content: url("../img/hit.svg");  	
@@ -620,9 +644,11 @@ li:hover .basket-form {
   background-color: #f7f1d9;
 }
 
-
-
 .big-address {
+  width: 302px;
+  height: 305px;
+  border-radius: 15px;
+  padding: 30px 27px;
   background-color: #fdfefe;
   color: #323232; 
   font-weight: 400;
@@ -634,6 +660,15 @@ li:hover .basket-form {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;  	
+}
+
+.big-address p {
+  margin: 0;
+  padding-bottom: 20px;  
+}
+
+.big-address .button {
+  display: inline-block;	
 }
 
 /*Форма обратной связи*/
@@ -670,39 +705,55 @@ li:hover .basket-form {
 
   /*Фильтры cream-ice.html*/
   
+.filters {
+  margin: 0 27px;
+  width: 860px; 
+}
+  
+.filters form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;  
+}
+  
 .filters fieldset {
-  border: none;   
+  border: none;
+  padding: 0;  
 }
 
 .filters legend {
+  padding-left: 15px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;  
 }
 
 .field-container {
+  padding: 0 15px;
   font-size: 16px;
   line-height: 32px;
   background-color: #a8b9b0;
   height: 36px;
+  border-radius: 18px;
   font-weight: 500;  
 }
 
+  /*Сортировка*/
+
 .field-select {
-  width: 195px;
+  width: 194px;
   overflow: hidden; 
 }
 
 .filters select {
   background-color: #a8b9b0;
   border: none;
-  /*vertical-align: middle;*/
   width: 215px;
   color: #ffffff;
   font-weight: 500;
   background-image: url("../img/icon-down-dir.png");
   background-repeat: no-repeat;
-  background-position: 170px 50%;
+  background-position: 153px 50%;
 }
 
 .filters select:hover {
@@ -712,66 +763,121 @@ li:hover .basket-form {
   background-position: 170px 50%;
 }
 
+  /*Диапазон*/
+
+.field-range {
+  width: 219px;	
+}
+
+  /*Жирность*/
+
+.field-fat {
+  width: 415px;
+  display: flex;
+  justify-content: space-between;    
+}
+
+.field-fat label {
+  padding-left: 32px;
+}	
+
 .filters input[type="radio"] {
   display: none; 	
 }
 
-.filters input[type="radio"]:checked+label::before {
-  content: url("../img/radio-on.png"); 
+.filters input[type="radio"]:checked+label {
+  background-image: url("../img/radio-on.png");
+  background-repeat: no-repeat;
+  background-position: 0px 50%;  
 }
 
-.filters input[type="radio"]+label::before {
-  content: url("../img/radio-off.png"); 
+.filters input[type="radio"]:checked+label:hover {
+  background-image: url("../img/radio-on-hover.png");
+  background-repeat: no-repeat;
+  background-position: 0px 50%;  
 }
 
-.filters input[type="radio"]:checked+label:hover::before {
-  content: url("../img/radio-on-hover.png"); 
+.filters input[type="radio"]+label {
+  background-image: url("../img/radio-off.png");
+  background-repeat: no-repeat;
+  background-position: 0px 50%;  
 }
 
-.filters input[type="radio"]+label:hover::before {
-  content: url("../img/radio-off-hover.png"); 
+.filters input[type="radio"]+label:hover {
+  background-image: url("../img/radio-off-hover.png");
+  background-repeat: no-repeat;
+  background-position: 0px 50%;  
+}
+
+  /*Наполнители*/
+
+.field-filler {
+  width: 703px;
+  display: flex;
+  justify-content: space-between;   
+}
+
+.field-filler label {
+  padding-left: 31px;
 }
 
 .filters input[type="checkbox"] {
   display: none; 	
 }
 
-.filters input[type="checkbox"]:checked+label::before {
-  content: url("../img/checkbox-on.png");
+.filters input[type="checkbox"]:checked+label {
+  background-image: url("../img/checkbox-on.png");
+  background-repeat: no-repeat;
+  background-position: 0px 50%;
 }
 
-.filters input[type="checkbox"]+label::before {
-  content: url("../img/checkbox-off.png"); 
+.filters input[type="checkbox"]:checked+label:hover {
+  background-image: url("../img/checkbox-on-hover.png");
+  background-repeat: no-repeat;
+  background-position: 0px 50%;
 }
 
-.filters input[type="checkbox"]:checked+label:hover::before {
-  content: url("../img/checkbox-on-hover.png"); 
+.filters input[type="checkbox"]+label {
+  background-image: url("../img/checkbox-off.png");
+  background-repeat: no-repeat;
+  background-position: 0px 50%;
 }
 
-.filters input[type="checkbox"]+label:hover::before {
-  content: url("../img/checkbox-off-hover.png"); 
+.filters input[type="checkbox"]+label:hover {
+  background-image: url("../img/checkbox-off-hover.png");
+  background-repeat: no-repeat;
+  background-position: 0px 50%;
 }
 
-.filters button {
+  /*Кнопка*/
+
+.button-filter {
   color: #ffffff;
   background-color: #9cb0a4;
-  width: 144px;
-  height: 37px;	
+  border-radius: 18px;
+  width: 145px;
+  height: 36px;	
   border: 2px solid #ffffff;
   font-size: 16px;
   font-weight: 500;
+  align-self: flex-end;
+  margin-bottom: 17px;
 }
 
-.filters button:hover {
+.button-filter:hover {
   color: #323232;
   background-color: #fbfcfb;	
 }
 
-.filters button:active {
+.button-filter:active {
   color: #323232;
   background-color: #eaeaea;
   box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.7);  
   border: none;
+}
+
+.filters legend + .field-container {
+  margin: 9px 0 17px 0;	
 }
 
   /*Каталог cream-ice.html*/
@@ -794,12 +900,32 @@ li:hover .basket-form {
 }
 
 .item-link {
-  color: #ffffff;  
+  color: #ffffff;
+  text-decoration: none;  
 }
 
 .item figure {
-  margin: 0; 	
+  margin: 0;       
 }
+
+.item-link figcaption {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  text-decoration: underline;  
+}
+
+.item-link p {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;   
+}
+
+.item-link span {
+  font-size: 30px;
+  line-height: 45px; 	
+}
+
 
 .quick-look {
   display: none;
@@ -817,7 +943,11 @@ li:hover .quick-look {
   /*Панагинация*/
 
 .pagination {
-  list-style: none;	
+  margin: 0 27px;
+  list-style: none;
+  padding: 0; 
+  text-align: right;
+  margin-bottom: 30px;  
 }
 
 .pagination li {
