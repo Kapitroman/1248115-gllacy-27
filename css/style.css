@@ -95,6 +95,10 @@ body {
   text-decoration: none;
 }
 
+form .button {
+  border: none;
+}  
+
 .button.big {
   padding: 12px 42px;
   border-radius: 45px;  
@@ -118,16 +122,33 @@ body {
 /*Форма по стайл гайду*/
 
 input {
+  
   background-color: #ffffff;
-  border: 1px solid #b2b2b2;  
+  border: none;  
+  box-shadow: 0 0 0 1px #b2b2b2; 
 }
 
 input:hover {
-  border: 2px solid #9a9a9a; 
+
+  box-shadow: 0 0 0 2px #9a9a9a;
 }
 
 input:focus {
-  border: 2px solid #2e88e4; 
+  box-shadow: 0 0 0 2px #2e88e4;
+}
+
+textarea { 
+  background-color: #ffffff;
+  border: none;  
+  box-shadow: 0 0 0 1px #b2b2b2;  
+}
+
+textarea:hover {
+  box-shadow: 0 0 0 2px #9a9a9a;
+}
+
+textarea:focus {
+  box-shadow: 0 0 0 2px #2e88e4;
 }
 
 /* header */
@@ -223,7 +244,12 @@ li:hover .sub-navigation {
 
 .sub-navigation li:first-child > a {
  font-weight: 700;
- border-bottom: 1px solid rgba(0, 0, 0, 0.2); 
+ border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+ border-radius: 5px 5px 0px 0px;  
+}
+
+.sub-navigation li:last-child > a {
+ border-radius: 0px 0px 5px 5px;  
 }
 
 .on-page {
@@ -511,7 +537,8 @@ li:hover .basket-form {
   background-image: url("../img/cross-big.svg");
   background-repeat: no-repeat;
   background-position: 50% 40%; 
-  background-size: 13px;  
+  background-size: 13px;
+  cursor: pointer;  
 }
 
 .basket-form .summa {
@@ -791,11 +818,14 @@ li:hover .basket-form {
 
 .form-callback {
   /*display: none;*/
+  /*потом поменять на position: fixed*/
   position: absolute;
-  top: 338px;
-  left: 363px;
-  width: 477px;
-  height: 443px;
+  top: 50%;
+  left: 50%;
+  width: 478px;
+  height: 444px;
+  margin-left: -239px;
+  margin-top: -222px;
   border-radius: 5px;
   background-color: #f8f7f4;
   padding: 18px 26px 26px 26px; 
@@ -832,7 +862,12 @@ li:hover .basket-form {
   text-align: right;	
 }
 
+.callback-close {
+  visibility: hidden;
+}
+
 .callback-close::before {
+  visibility: visible;
   content: "";
   position: absolute;
   top: 15px;
@@ -842,6 +877,7 @@ li:hover .basket-form {
   background-color: transparent;
   background-image: url("../img/cross-big.svg"); 
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 
