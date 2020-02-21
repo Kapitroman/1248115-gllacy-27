@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="css/style.css">
   </head>
   <body class="cream-ice">
+  	<div class="site-wrapper">
+	  <div class="container">
     <header class="main-header">
 	  <nav class="main-navigation">
 	    <a class="main-header-logo" href="index.html">
@@ -153,8 +155,13 @@
 		  <fieldset>
             <legend>Цена: 100 руб. – 500 руб.</legend>
 			<div class="field-container field-range">		  		      
-		      <label class="visually-hidden" for="id-range">Цена</label>
-              <input type="range" name="range" id="id-range" min="100" step="5" max="500" value="100">
+		       <div class="range-controls">
+                 <div class="scale">
+                   <div class="bar"></div>
+                 </div>
+                 <div class="range-toggle range-toggle-min"></div>
+                 <div class="range-toggle range-toggle-max"></div>
+               </div>
 			</div>
           </fieldset>
 		  <fieldset>
@@ -377,6 +384,8 @@
 		<p>Сделано в <a class="text-ref-gray" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
 	  </div>
 	</footer>
+	</div>
+	</div>
 	<script src="js/..."></script>
   </body>
 </html>
