@@ -299,12 +299,12 @@ li:hover .sub-navigation {
 .user-navigation a:not(.text-ref-white) {
   display: block;
   vertical-align: top;
-  background-color: #9db1a5;
+  background-color: rgba(255, 255, 255, 0.2);
   color: #ffffff; 
 }
 
 .product-1:checked ~ .site-wrapper .user-navigation a:not(.text-ref-white) {
-  background-color: #9db1a5;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .product-2:checked ~ .site-wrapper .user-navigation a:not(.text-ref-white) {
@@ -448,6 +448,7 @@ li:hover .basket-form {
   padding: 20px 15px;
   border-radius: 5px;
   background-color: #f8f7f4;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
   
 .search-navigation p {
@@ -473,6 +474,7 @@ li:hover .basket-form {
   border-radius: 5px;
   padding: 21px 18px;
   background-color: #f8f7f4;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .entrance-navigation {
@@ -524,7 +526,8 @@ li:hover .basket-form {
   font-size: 13px;
   line-height: 16px; 
   font-weight: 400; 
-  color: #323232;  
+  color: #323232; 
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);  
 }
 
 .tableContainer {
@@ -611,7 +614,6 @@ li:hover .basket-form {
 
 .slide {
   display: none;
-  background-color: red;
 }
 
 .slider-item img {
@@ -775,18 +777,9 @@ li:hover .basket-form {
 }
 
 .product-1:checked ~ .site-wrapper .item-hover:hover,
-.product-1:checked ~ .site-wrapper .quick-look{
-  background-color: #9db1a5;
-}
-
 .product-2:checked ~ .site-wrapper .item-hover:hover,
-.product-2:checked ~ .site-wrapper .quick-look {
-  background-color: #a6b1bd;
-}
-
-.product-3:checked ~ .site-wrapper .item-hover:hover,
-.product-3:checked ~ .site-wrapper .quick-look {
-  background-color: #b9a9a4;
+.product-3:checked ~ .site-wrapper .item-hover:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /*Магазин Глейси*/
@@ -1006,6 +999,7 @@ li:hover .basket-form {
   border-radius: 5px;
   background-color: #f8f7f4;
   padding: 18px 26px 26px 26px; 
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
 }
 
 .form-callback p {
@@ -1092,7 +1086,7 @@ li:hover .basket-form {
 }
 
 .cream-ice h1 {
- margin: 0 0 32px 27px;
+ margin-bottom: 32px;
  font-size: 35px;
  line-height: 41px;
  font-weight: 700;
@@ -1134,36 +1128,53 @@ li:hover .basket-form {
   padding: 0 15px;
   font-size: 16px;
   line-height: 32px;
-  background-color: #a8b9b0;
+  /*background-color: #a8b9b0;*/
+  background-color: rgba(255, 255, 255, 0.2);
   height: 36px;
   border-radius: 18px;
-  font-weight: 500;  
+  font-weight: 500; 
+  vertical-align: middle;   
+}
+
+.field-container.field-select {
+ padding-left: 0;
 }
 
   /*Сортировка*/
 
 .field-select {
   width: 194px;
-  overflow: hidden; 
+  overflow: hidden;
+ 
 }
 
 .filters select {
-  background-color: #a8b9b0;
+  padding: 6px 15px 9px 15px; 
+  /*background-color: #a8b9b0;*/
+  background-color: rgba(255, 255, 255, 0.2);
   border: none;
   width: 215px;
   color: #ffffff;
   font-weight: 500;
   background-image: url("../img/icon-down-dir.png");
   background-repeat: no-repeat;
-  background-position: 153px 50%;
+  background-position: 167px 50%;
+
 }
 
 .filters select:hover {
   color: #323232;
   background-image: url("../img/icon-down-dir-hover.png");
   background-repeat: no-repeat;
-  background-position: 153px 50%;
+  background-position: 167px 50%;
 }
+
+.field-select option {
+  background-color: #ffffff;
+  font-weight: 400;  
+}
+
+
 
   /*Диапазон*/
 
@@ -1308,7 +1319,8 @@ li:hover .basket-form {
 
 .button-filter {
   color: #ffffff;
-  background-color: #9cb0a4;
+  background-color: #a6b7ae;
+  /*background-color: #9cb0a4;*/
   border-radius: 18px;
   width: 145px;
   height: 36px;	
@@ -1401,7 +1413,8 @@ li:hover .basket-form {
   /*width: 293px;*/
   left: 0;
   padding-bottom: 20px;
-  background-color: #9bafa3; 
+  /*background-color: #849d8f;*/
+  /*background-color: rgba(255, 255, 255, 0.2);*/
   z-index: 2;
 }
 
@@ -1409,7 +1422,8 @@ li:hover .basket-form {
   display: block; 
   width: 208px;
   margin: 0 auto;  
-  padding: 11px 18px;  
+  padding: 11px 18px;
+    
 }
 
 .item-hover:hover {
@@ -1420,14 +1434,16 @@ li:hover .basket-form {
   padding-top: 8px;
   border-radius: 5px;
   /*padding-top: 6px;*/
-  background-color: #9bafa3;
+  /*background-color: #9bafa3;*/
+  background-color: rgba(255, 255, 255, 0.2);
   z-index: 1; 
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);  
 }
 
 .item-hover:hover .quick-look {
   display: block;
-  border-radius: 5px;  
+  border-radius: 5px; 
+  /*background-color: rgba(255, 255, 255, 0.2);*/  
 }
 
   /*Панагинация*/
