@@ -53,6 +53,7 @@ img {
 .container {
   max-width: 1200px;
   min-width: 1146px;
+  padding: 0 27px;
   margin: 0 auto;
 }
 
@@ -170,7 +171,8 @@ textarea:focus {
   /*Навигация по сайту*/
 .main-header {
   position: relative;
-  margin: 0 27px;
+  /*margin: 0 27px;*/
+  margin: 0;
   padding-top: 10px;
   z-index: 2; 
 }
@@ -593,7 +595,8 @@ li:hover .basket-form {
     
 .slider {
   position: relative;
-  margin: 0 27px;
+  /*margin: 0 27px;*/
+  margin: 0;
   min-height: 574px;
   padding-top: 10px;
   text-align: center;
@@ -687,22 +690,32 @@ li:hover .basket-form {
   
 .banner {
   position: relative;
-  margin: 0 27px;
+  /*margin: 0 27px;*/
+  margin: 0;
 }
 
 .wrap-banner {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; 	
+  justify-content: space-between;
+  min-width: 1092px;  
 }
 
 .banner-item {
   display: flex;
   flex-direction: column;
-  width: 560px;
+  /*flex-shrink: 1;
+  flex-basis: 533px;*/
+  flex: 1 1 533px;
+  max-width: 560px;
   min-height: 229px;
   border-radius: 10px;
-  margin-bottom: 17px;  
+  margin-bottom: 17px;
+  margin-right: 13px; 
+}
+
+.banner-item:nth-child(2n) {
+  margin-right: 0;
 }
 
 .banner-item h3 {
@@ -779,7 +792,9 @@ li:hover .basket-form {
 /*Магазин Глейси*/
 
 .about-gllacy {
-  margin: 0 27px;
+  /*margin: 0 27px;*/
+  min-width: 1092px;
+  margin: 0;
   padding: 26px 6px 0 6px;
   background-color: #eddfc5;
   background-image: url("../img/waffle.jpg");
@@ -801,16 +816,21 @@ li:hover .basket-form {
   padding: 0;
   padding-bottom: 13px;
   display: flex;
-  flex-wrap: wrap;    
+  flex-wrap: wrap; 
+  justify-content: space-between;  
 }
 
 .gllacy-shop li {
-  width: 567px; 
-  padding: 13px;
+  /*max-width: 567px;*/
+  flex: 1 1 527px;  
+  max-width: 554px;
+  padding: 13px 0 13px 70px;
   padding-left: 70px;  
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px; 
+  line-height: 22px;
+  margin-right: 13px;
+  
 }
 
 .ice-cream {
@@ -841,7 +861,8 @@ li:hover .basket-form {
 /*Прочая информация - блок для компоновки*/
 
 .wrap-other-inform {
-  margin: 40px 27px;
+  margin: 40px 0;
+  /*margin: 40px 27px;*/
   display: flex;
   justify-content: space-between;  
 }
@@ -849,7 +870,9 @@ li:hover .basket-form {
 /*Новое в нашем блоге*/
 
 .blog {
-  width: 560px;
+  flex: 1 1 533px;
+  max-width: 560px;
+  margin-right: 13px;
   color: #323232;
   padding: 25px 20px;
   border-radius: 15px;  
@@ -873,7 +896,8 @@ li:hover .basket-form {
 /*Рассылка*/
 
 .subscription {
-  width: 560px;
+  flex: 1 1 533px;
+  max-width: 560px;
   height: 222px;
   color: #5a5a5a;
   border-radius: 15px;
@@ -918,10 +942,17 @@ li:hover .basket-form {
 
 .address {
   position:relative;
+  height: 430px;
 }
 
 .address-fon {
-  background-color: #f7f1d9;  
+  position: absolute;
+  /*width: 1200px;
+  height: 430px;*/
+  top: 0;
+  left: -27px;
+  right: -27px;
+  /*background-color: #f7f1d9;*/ 
 }
 
 .marker {
@@ -1038,7 +1069,8 @@ li:hover .basket-form {
   line-height: 16px;
   font-weight: 400;
   display: flex;
-  margin: 27px 27px 12px 27px;
+  margin: 27px 0 12px 0;
+  /*margin: 27px 27px 12px 27px;*/
   padding-left: 0;  
 }
 
@@ -1069,7 +1101,8 @@ li:hover .basket-form {
   /*Фильтры cream-ice.html*/
   
 .filters {
-  margin: 0 27px;
+  margin: 0;
+  /*margin: 0 27px;*/
   /*width: 860px;*/
 }
   
@@ -1305,7 +1338,8 @@ li:hover .basket-form {
   /*Каталог cream-ice.html*/
   
 .catalog {
-  margin: 25px 27px 0 27px;	
+  /*margin: 25px 27px 0 27px;*/	
+  margin: 25px 0 0 0;
 }
 
 .catalog-items {
@@ -1399,7 +1433,8 @@ li:hover .basket-form {
   /*Панагинация*/
 
 .pagination {
-  margin: 40px 27px 0 27px;
+  /*margin: 40px 27px 0 27px;*/
+  margin: 40px 0 0 0;
   list-style: none;
   padding: 0; 
   text-align: right;
@@ -1452,7 +1487,8 @@ a.current-pagination {
 /*footer*/
 
 .main-footer {
-  margin: 0 27px;
+  margin: 0;	
+  /*margin: 0 27px;*/
   padding: 20px 0px 25px 0px;
   display: flex;
   justify-content: space-between;    
