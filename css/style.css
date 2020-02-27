@@ -51,8 +51,7 @@ img {
 }
 
 .container {
-  max-width: 1200px;
-  min-width: 1146px;
+  width: 1200px;
   padding: 0 27px;
   margin: 0 auto;
 }
@@ -97,7 +96,7 @@ img {
 /*Кнопки по стайлгайду */
 
 .button {
-  padding: 12px 22px;
+  padding: 11px 22px;
   border-radius: 25px;
   background-color: #ef6140;
   background-image: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
@@ -117,8 +116,8 @@ form .button {
 
 .button.slide-button {
   display: inline-block;
-  padding: 12px 44px;
   vertical-align: top;
+  padding: 11px 42px; 
   border-radius: 50px;  
   font-size: 32px;
   line-height: 44px;  
@@ -171,14 +170,18 @@ textarea:focus {
   /*Навигация по сайту*/
 .main-header {
   position: relative;
-  /*margin: 0 27px;*/
   margin: 0;
-  padding-top: 10px;
+  padding-top: 8px;
   z-index: 2; 
 }
  
 .main-navigation {
   display: flex; 
+}
+
+.main-header-logo {
+  flex-basis: 154px;
+  flex-shrink: 0;  
 }
 
 .main-navigation ul {
@@ -191,15 +194,15 @@ textarea:focus {
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
-  margin-right: auto;  
+  margin-right: auto;
+  flex-wrap: wrap;  
 }
 
 .site-navigation a {
-  padding: 6px 14px;
   display: block;
-  vertical-align: top;  
+  vertical-align: top;
+  padding: 4px 14px 8px 14px;  
 }
-
 
 .site-navigation a:link,
 .site-navigation a:visited {
@@ -208,17 +211,16 @@ textarea:focus {
 
 .site-navigation a:hover,
 .site-navigation a:focus {
-  border-radius: 16px;	
+  border-radius: 16px;
   background-color: #f8f7f4;
   color: #323232;
   text-decoration: none;
 }
 
-
 .site-navigation a:active {
   background-color: #f8f7f4;
   color: #323232;
-  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.7)
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.7);
   text-decoration: none;
 }
 
@@ -238,12 +240,13 @@ li:hover .sub-navigation {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .sub-navigation a {
   display: block;
   vertical-align: middle;
-  padding: 13px 20px; 
+  padding: 8px 20px; 
   text-decoration: none;  
 }
 
@@ -258,13 +261,13 @@ li:hover .sub-navigation {
   border-radius: inherit;  
 }
 
-
 .sub-navigation a:active {
   background-color: #f6b5a5;
   box-shadow: none;  
 }
 
 .sub-navigation li:first-child > a {
+ padding: 11px 20px;
  font-weight: 700;
  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
  border-radius: 5px 5px 0px 0px;  
@@ -293,7 +296,7 @@ li:hover .sub-navigation {
   display: flex;
   font-size: 14px;
   line-height: 16px;
-  font-weight: 500;   
+  font-weight: 500;
 }
 
 .user-navigation a:not(.text-ref-white) {
@@ -411,7 +414,7 @@ li:hover .basket-form {
 .contacts {
   position: absolute;
   right: 0;
-  top: 76px;
+  top: 72px;
   margin: 0;
   color: #ffffff;
   font-weight: 700; 
@@ -429,7 +432,7 @@ li:hover .basket-form {
 }
 
 .contacts span:last-child {
-  padding-top: 6px;
+  padding-top: 4px;
   font-size: 22px;
   line-height: 24px; 
 }
@@ -442,10 +445,10 @@ li:hover .basket-form {
   display: none;
   position: absolute;
   top: 60px;
-  left: 592px;
+  right: 213px;
   width: 342px;
-  height: 84px;
-  padding: 20px 15px;
+  height: 86px;
+  padding: 22px 16px;
   border-radius: 5px;
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -497,19 +500,19 @@ li:hover .basket-form {
 .wrap-entrance-link {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between; 
-  /*vertical-align: middle;*/  
+  justify-content: space-between;  
+  align-items: center;  
 }
 
-.wrap-entrance-link p {
-  padding: 5px 0;
+.wrap-entrance-link .button {
+  padding: 12px 23px;	
 }
 
 .entrance-form .text-ref-white {
-  display: block;
+  margin: 0;
   font-weight: 400;
   font-size: 13px;
-  vertical-align: middle;
+  line-height: 24px;
 }
 
 /*Корзина-поп-окно*/
@@ -543,7 +546,6 @@ li:hover .basket-form {
 
 .tableCell {
   display: table-cell;
-
   padding: 10px 12px 10px 0px;
   vertical-align: baseline;  
 }
@@ -598,9 +600,8 @@ li:hover .basket-form {
     
 .slider {
   position: relative;
-  /*margin: 0 27px;*/
   margin: 0;
-  min-height: 574px;
+  min-height: 572px;
   padding-top: 10px;
   text-align: center;
   color: #ffffff;
@@ -646,18 +647,15 @@ li:hover .basket-form {
   bottom: 65px;
   left: 0;
   z-index: 20;
-  
   font-size: 0;
 }
 
 .slider-controls label {
   display: inline-block;
-  width: 17px;
-  height: 17px;
-  margin-right: 8px;
-
+  width: 20px;
+  height: 20px;
+  margin-right: 9px;
   vertical-align: top;
-
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
@@ -692,7 +690,6 @@ li:hover .basket-form {
   
 .banner {
   position: relative;
-  /*margin: 0 27px;*/
   margin: 0;
 }
 
@@ -700,28 +697,20 @@ li:hover .basket-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  min-width: 1092px;  
+  width: 1146px;  
 }
 
 .banner-item {
   display: flex;
   flex-direction: column;
-  /*flex-shrink: 1;
-  flex-basis: 533px;*/
-  flex: 1 1 533px;
-  max-width: 560px;
+  width: 560px;
   min-height: 229px;
   border-radius: 10px;
-  margin-bottom: 17px;
-  margin-right: 13px; 
-}
-
-.banner-item:nth-child(2n) {
-  margin-right: 0;
+  margin-bottom: 15px;
 }
 
 .banner-item h3 {
-  margin: 20px 20px;
+  margin: 13px 20px 15px 20px;
   color: #ffffff;
   font-size: 35px;
   line-height: 41px;  
@@ -732,17 +721,18 @@ li:hover .basket-form {
   color: #ffffff;
   font-size: 18px;
   line-height: 22px;
-  margin: 0px 20px;  
+  margin: 0px 22px 45px 22px; 
 }
 
 .banner-item .button {
   margin-right: 20px;
-  margin-left: auto;  
+  align-self: flex-end;
+  margin-bottom: 20px;   
 }
 
 .strawberry {
   background-color: #c51c48;
-  background-image: url("../img/strawberry.jpg");  
+  background-image: url("../img/strawberry.jpg"); 
 }
 
 .chocolate {
@@ -750,14 +740,12 @@ li:hover .basket-form {
   background-image: url("../img/chocolate.jpg");	
 }
 
-.banner .button {
-  display: inline-block;
-  margin-top: 35px;
-  margin-bottom: 25px;  
-}
-
 
   /*ХИТ*/
+  
+.hits .item {
+  margin-bottom: 0;	 
+}
 
 .hits figure::before {
   position: absolute;
@@ -785,26 +773,26 @@ li:hover .basket-form {
 /*Магазин Глейси*/
 
 .about-gllacy {
-  /*margin: 0 27px;*/
-  min-width: 1092px;
+  width: 1146px;
   margin: 0;
-  padding: 26px 6px 0 6px;
+  padding: 22px 7px 0 7px;
   background-color: #eddfc5;
   background-image: url("../img/waffle.jpg");
   color: #323232; 
-  border-radius: 15px;  
+  border-radius: 15px; 
+  background-color: white;  
 }
 
 .about-us {
   margin: 0;
-  padding: 0 13px;
+  padding: 0 14px;
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;   
 }
 
 .gllacy-shop {
-  margin-top: 13px;
+  margin-top: 8px;
   list-style: none;
   padding: 0;
   padding-bottom: 13px;
@@ -814,16 +802,12 @@ li:hover .basket-form {
 }
 
 .gllacy-shop li {
-  /*max-width: 567px;*/
-  flex: 1 1 527px;  
-  max-width: 554px;
-  padding: 13px 0 13px 70px;
+  width: 565px;
+  padding: 13px 0 10px 69px;
   padding-left: 70px;  
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
-  margin-right: 13px;
-  
+  line-height: 22px;  
 }
 
 .ice-cream {
@@ -854,8 +838,7 @@ li:hover .basket-form {
 /*Прочая информация - блок для компоновки*/
 
 .wrap-other-inform {
-  margin: 40px 0;
-  /*margin: 40px 27px;*/
+  margin: 40px 0 37px 0;
   display: flex;
   justify-content: space-between;  
 }
@@ -863,23 +846,27 @@ li:hover .basket-form {
 /*Новое в нашем блоге*/
 
 .blog {
-  flex: 1 1 533px;
-  max-width: 560px;
-  margin-right: 13px;
+  width: 560px;
   color: #323232;
-  padding: 25px 20px;
-  border-radius: 15px;  
+  padding: 22px 20px;
+  border-radius: 15px;
+  background-color: #ffffff;  
   background-image: url("../img/strawberry-background.jpg");
-  background-repeat: no-repeat;	
+  background-repeat: no-repeat;
+  background-position: 0 40%;
 }
 
 .blog h1 {
+  margin: 0;
+  margin-bottom: 4px;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;	
 }
 
 .blog a {
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px; 
@@ -889,8 +876,7 @@ li:hover .basket-form {
 /*Рассылка*/
 
 .subscription {
-  flex: 1 1 533px;
-  max-width: 560px;
+  width: 560px;
   height: 222px;
   color: #5a5a5a;
   border-radius: 15px;
@@ -901,7 +887,7 @@ li:hover .basket-form {
 .substrate {
   margin: 6px;
   height: 210px;
-  padding: 27px 18px;
+  padding: 27px 16px 27px 20px;
   border-radius: 15px;
   background-color: #f8f7f4;
   font-weight: 400;
@@ -915,19 +901,19 @@ li:hover .basket-form {
 }
 
 .substrate form {
-  padding: 38px 0px 0px 0px;
+  padding-top: 34px;
 }
 
 .substrate input {
-  width: 69%;
-  height: 44px;
-  padding-left: 13px;
-  border-radius: 4px;  
+  width: 72%;
+  height: 42px;
+  padding-left: 15px;
+  border-radius: 4px;   
 }
 
 .substrate .button {
-  margin-left: 12px;
-  text-align: right;  
+  margin-left: 10px;
+  padding: 11px 18px; 
 }
 
 
@@ -936,16 +922,14 @@ li:hover .basket-form {
 .address {
   position:relative;
   height: 430px;
+  margin-bottom: 18px;
 }
 
 .address-fon {
   position: absolute;
-  /*width: 1200px;
-  height: 430px;*/
   top: 0;
   left: -27px;
-  right: -27px;
-  /*background-color: #f7f1d9;*/ 
+  right: -27px; 
 }
 
 .marker {
@@ -956,40 +940,62 @@ li:hover .basket-form {
 
 .big-address {
   position: absolute;
-  top: 65px;
+  top: 62px;
   right: 27px;
   width: 302px;
   min-height: 305px;
   border-radius: 15px;
   padding: 30px 27px;
   background-color: #fdfefe;
-  color: #323232; 
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;   
+  color: #323232;   
 }
 
-.big-address span {
+.font-address1 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;  
+}
+
+.font-address1 span {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;  	
 }
 
-.big-address p {
-  margin: 0;
-  padding-bottom: 20px;  
+.font-address2 {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;  
+}
+
+.font-address2 span {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;  	
+}
+
+.font-address1 + .font-address1 {
+  margin-top: 16px;	
+}
+
+.font-address1 + .font-address2 {
+  margin-top: 8px;	
 }
 
 .big-address .button {
-  display: inline-block;  
+  display: block;
+  text-align: center;
+  vertical-align: top; 
 }
+
 
 /*Форма обратной связи*/
 
 .form-callback {
   display: none;
-  /*потом поменять на position: fixed*/
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   width: 478px;
@@ -1063,14 +1069,13 @@ li:hover .basket-form {
   line-height: 16px;
   font-weight: 400;
   display: flex;
-  margin: 27px 0 12px 0;
-  /*margin: 27px 27px 12px 27px;*/
+  margin: 25px 0 0px 0;
   padding-left: 0;  
 }
 
 .breadcrumbs a {
   display: block;
-  padding-right: 15px;
+  padding-right: 14px;
   background-image: url("../img/breadcrumbs-arrow.png");
   background-repeat: no-repeat;
   background-position: right 50%;
@@ -1080,13 +1085,13 @@ li:hover .basket-form {
   padding-left: 8px;	
 }
 
-
 .cream-ice {
   color: #ffffff; 	
 }
 
 .cream-ice h1 {
- margin-bottom: 32px;
+ margin: 0;
+ margin-bottom: 28px;
  font-size: 35px;
  line-height: 41px;
  font-weight: 700;
@@ -1096,29 +1101,29 @@ li:hover .basket-form {
   
 .filters {
   margin: 0;
-  /*margin: 0 27px;*/
-  /*width: 860px;*/
+  margin-bottom: 19px;
 }
   
 .filters form {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /*space-between;*/  
+  justify-content: flex-start;   
+  align-content: center;
 }
   
 .filters fieldset {
   border: none;
   padding: 0;
-  margin: 0;  
+  margin: 0; 
 }
 
 .filters fieldset + fieldset:not( :last-of-type),
 .filters fieldset + button {
-  margin-left: 20px;	
+  margin-left: 16px;  
 }
 
 .filters legend {
-  padding-left: 15px;
+  padding-left: 16px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;  
@@ -1128,12 +1133,11 @@ li:hover .basket-form {
   padding: 0 15px;
   font-size: 16px;
   line-height: 32px;
-  /*background-color: #a8b9b0;*/
   background-color: rgba(255, 255, 255, 0.2);
   height: 36px;
   border-radius: 18px;
   font-weight: 500; 
-  vertical-align: middle;   
+  vertical-align: middle;  
 }
 
 .field-container.field-select {
@@ -1142,23 +1146,26 @@ li:hover .basket-form {
 
   /*Сортировка*/
 
-.field-select {
+.field-select { 
   width: 194px;
   overflow: hidden;
- 
 }
 
 .filters select {
-  padding: 6px 15px 9px 15px; 
-  /*background-color: #a8b9b0;*/
+  padding: 8px 15px 9px 15px; 
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
-  width: 215px;
+  width: 194px;
   color: #ffffff;
+  font-size: 16px;
+  line-height: 18px;
   font-weight: 500;
   background-image: url("../img/icon-down-dir.png");
   background-repeat: no-repeat;
   background-position: 167px 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 
 }
 
@@ -1171,10 +1178,10 @@ li:hover .basket-form {
 
 .field-select option {
   background-color: #ffffff;
-  font-weight: 400;  
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;  
 }
-
-
 
   /*Диапазон*/
 
@@ -1189,12 +1196,11 @@ li:hover .basket-form {
 
 .range-controls .scale {
   height: 4px;
-  background-color: rgba(248, 247, 244, 0.5);
-  
+  background-color: rgba(248, 247, 244, 0.5);  
 }
 
 .range-controls .bar {
-  width: 70%;
+  width: 60%;
   height: 4px;
   background-color: #ffffff;
 }
@@ -1221,26 +1227,25 @@ li:hover .basket-form {
 }
 
 .range-toggle-max {
-  left: 70%;
+  left: 60%;
 }
 
   /*Жирность*/
 
 .field-fat {
-  /*width: 415px;*/
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between; 
+  align-items: center;  
 }
 
 .field-fat label {
   padding-left: 32px;
-  margin-right: 13px;
+  margin-right: 16px;
 }
 
 .field-fat label:last-child {
   margin-right: 0
 }
-
 
 .filters input[type="radio"] {
   display: none; 	
@@ -1273,14 +1278,14 @@ li:hover .basket-form {
   /*Наполнители*/
 
 .field-filler {
-  /*width: 703px;*/
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
+  align-items: center;  
 }
 
 .field-filler label {
   padding-left: 33px;
-  margin-right: 18px;
+  margin-right: 21px;
 }
 
 .field-filler label:last-child {
@@ -1320,7 +1325,6 @@ li:hover .basket-form {
 .button-filter {
   color: #ffffff;
   background-color: #a6b7ae;
-  /*background-color: #9cb0a4;*/
   border-radius: 18px;
   width: 145px;
   height: 36px;	
@@ -1328,7 +1332,7 @@ li:hover .basket-form {
   font-size: 16px;
   font-weight: 500;
   align-self: flex-end;
-  margin-bottom: 17px;
+  margin-bottom: 13px;
 }
 
 .button-filter:hover {
@@ -1344,14 +1348,13 @@ li:hover .basket-form {
 }
 
 .filters legend + .field-container {
-  margin: 9px 0 17px 0;	
+  margin: 7px 0 13px 0;
 }
 
   /*Каталог cream-ice.html*/
   
-.catalog {
-  /*margin: 25px 27px 0 27px;*/	
-  margin: 25px 0 0 0;
+.catalog {	
+  margin: 0;
 }
 
 .catalog-items {
@@ -1364,10 +1367,11 @@ li:hover .basket-form {
 
 .item {
   margin-top: 8px;
+  margin-bottom: 5px;
   position: relative;
   width: 267px;
   padding: 0 0 15px 0;
-  text-align: center;  
+  text-align: center;   
 }
 
 .item-link {
@@ -1380,7 +1384,7 @@ li:hover .basket-form {
 }
 
 .item-link figcaption {
-  padding: 12px 8px;
+  padding: 10px 4px;
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
@@ -1401,7 +1405,6 @@ li:hover .basket-form {
   left: 13px;  
 }
 
-
 .catalog-price span {
   font-size: 30px;
   line-height: 45px; 	
@@ -1409,21 +1412,17 @@ li:hover .basket-form {
 
 .quick-look {
   display: none;
-  /*position: absolute;*/
-  /*width: 293px;*/
   left: 0;
   padding-bottom: 20px;
-  /*background-color: #849d8f;*/
-  /*background-color: rgba(255, 255, 255, 0.2);*/
   z-index: 2;
 }
 
 .quick-look .button {
   display: block; 
+  vertical-align: top;
   width: 208px;
   margin: 0 auto;  
-  padding: 11px 18px;
-    
+  padding: 11px 18px;    
 }
 
 .item-hover:hover {
@@ -1433,8 +1432,6 @@ li:hover .basket-form {
   width: 293px;
   padding-top: 8px;
   border-radius: 5px;
-  /*padding-top: 6px;*/
-  /*background-color: #9bafa3;*/
   background-color: rgba(255, 255, 255, 0.2);
   z-index: 1; 
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);  
@@ -1442,15 +1439,13 @@ li:hover .basket-form {
 
 .item-hover:hover .quick-look {
   display: block;
-  border-radius: 5px; 
-  /*background-color: rgba(255, 255, 255, 0.2);*/  
+  border-radius: 5px;   
 }
 
   /*Панагинация*/
 
 .pagination {
-  /*margin: 40px 27px 0 27px;*/
-  margin: 40px 0 0 0;
+  margin: 20px 0 18px 0;
   list-style: none;
   padding: 0; 
   text-align: right;
@@ -1459,20 +1454,24 @@ li:hover .basket-form {
 
 .pagination li {
   display: inline-block;
-  text-align: center;	
+  text-align: center;
   line-height: 26px;
   padding: 30px 0;
 }
 
 .pagination a {
   display: block;
+  vertical-align: middle;
   font-size: 16px;
   width: 26px;
   height: 26px;
   color: #ffffff;
   text-decoration: none; 
-  vertical-align: middle;
   border-radius: 13px;
+}
+
+.pagination li:last-child {
+  width: 16px;
 }
 
 .pagination a:hover:not(.left-arrow) {
@@ -1504,10 +1503,9 @@ a.current-pagination {
 
 .main-footer {
   margin: 0;	
-  /*margin: 0 27px;*/
-  padding: 20px 0px 25px 0px;
+  padding: 0px 0px 18px 0px;
   display: flex;
-  justify-content: space-between;    
+  justify-content: space-between;   
 }
 
 
@@ -1515,18 +1513,19 @@ a.current-pagination {
   
 .footer-social .social {
   list-style: none;
-  max-width: 283;
+  max-width: 300px;
   padding: 0;
   display: flex;
   flex-wrap: wrap; 
 }
 
 .social li {
+  margin-right: 11px;	
   margin-bottom: 11px;	
 }
 
-.social li + li {
-  margin-left: 11px;	
+.social li:nth-child(6n) {
+  margin-right: 0;	
 }
 
 .twitter::before {
@@ -1589,21 +1588,29 @@ a.current-pagination {
 }
 .info {
   list-style: none;	
-  width: 347px;
-  padding: 0;
-  padding-left: 20px;
-  background-image: url("../img/heart.svg"); 
-  background-repeat: no-repeat; 
-  background-position: 0 2px;  
+  width: 345px;
+  padding: 0; 
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
+  align-items: flex-start;  
 }
 
 .info li {
-  width: 163px;  
+  width: 177px;
+  margin: 0;
+  padding: 0;
+  padding-left: 0px;
 }
 
-.for-suppliers {
+.info li:nth-child(2n+1) {
+  width: 158px;
+  padding-left: 20px; 
+}
+
+.for-suppliers { 
+  background-image: url("../img/heart.svg"); 
+  background-repeat: no-repeat;
+  background-position: 0 5px;
   font-weight: 700;  
 }
 
@@ -1614,9 +1621,15 @@ a.current-pagination {
   height: 60px;
   color: #ffffff;
   font-size: 12px;
-  line-height: 16px; 	
+  line-height: 16px; 
+}
+
+.footer-copyright > a {
+  display: block;
+  vertical-align: center;
+  margin-left: 4px;  
 }
 
 .footer-copyright p {
-  margin-top: 2px;	
+  margin-top: 2px; 
 }
