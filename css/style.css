@@ -224,7 +224,8 @@ textarea:focus {
   text-decoration: none;
 }
 
-li:hover .sub-navigation {
+li:hover .sub-navigation,
+li:focus-within .sub-navigation  {
   display: block;	
 }
 
@@ -261,6 +262,13 @@ li:hover .sub-navigation {
   border-radius: inherit;  
 }
 
+.sub-navigation .on-page:hover,
+.sub-navigation .on-page:focus {
+  background-color: #d07058;
+  color: #ffffff;
+  border-radius: inherit;  
+}
+
 .sub-navigation a:active {
   background-color: #f6b5a5;
   box-shadow: none;  
@@ -285,9 +293,8 @@ li:hover .sub-navigation {
 }
 
 .sub-navigation .on-page {
-  border-radius: inherit;	
+  border-radius: inherit;  
 }
-
 
   /*Пользовательская навигация*/
 
@@ -299,7 +306,7 @@ li:hover .sub-navigation {
   font-weight: 500;
 }
 
-.user-navigation a:not(.text-ref-white) {
+.user-navigation a:not(.text-ref-white)/*:not(.basket-link)*/ {
   display: block;
   vertical-align: top;
   background-color: rgba(255, 255, 255, 0.2);
@@ -316,6 +323,15 @@ li:hover .sub-navigation {
 
 .product-3:checked ~ .site-wrapper .user-navigation a:not(.text-ref-white) {
   background-color: #b9a9a4;
+}
+
+.product-1:checked ~ .site-wrapper .user-navigation a:hover:not(.text-ref-white), 
+.product-1:checked ~ .site-wrapper .user-navigation a:focus:not(.text-ref-white),
+.product-2:checked ~ .site-wrapper .user-navigation a:hover:not(.text-ref-white), 
+.product-2:checked ~ .site-wrapper .user-navigation a:focus:not(.text-ref-white),
+.product-3:checked ~ .site-wrapper .user-navigation a:hover:not(.text-ref-white), 
+.product-3:checked ~ .site-wrapper .user-navigation a:focus:not(.text-ref-white) {
+  background-color: #f8f7f4;
 }
 
 .user-navigation a:hover,
@@ -347,7 +363,8 @@ li:hover .sub-navigation {
   background-position: 50% 50%;  
 }
 
-li:hover .search-form {
+li:hover .search-form,
+li:focus-within .search-form {
   display: block;	
 }
 
@@ -369,7 +386,8 @@ li:hover .search-form {
   background-position: 16px 50%;  
 }
 
-li:hover .entrance-form {
+li:hover .entrance-form,
+li:focus-within .entrance-form {
   display: block;	
 }
 
@@ -390,22 +408,18 @@ li:hover .entrance-form {
   background-position: 16px 50%;
 }
 
-.basket-link {
+.user-navigation a.basket-link {
   padding: 8px 16px 8px 45px;
   border-radius: 16px;
-  background-image: url("../img/basket-red-white.svg");
-  background-repeat: no-repeat;
-  background-position: 16px 50%;
-}
-
-.basket-link:hover,
-.basket-link:focus {
+  background-color: #f8f7f4; 
+  color: #323232;  
   background-image: url("../img/basket-red.svg"); 
   background-repeat: no-repeat;
-  background-position: 16px 50%;
+  background-position: 16px 50%;	
 }
 
-li:hover .basket-form {
+li:hover .basket-form,
+li:focus-within .basket-form {
   display: block;	
 }
 
@@ -533,18 +547,18 @@ li:hover .basket-form {
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);  
 }
 
-.tableContainer {
+.table-container {
   display: table;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
 }
 
-.tableRow {
+.table-row {
   display: table-row;
 }
 
-.tableCell {
+.table-cell {
   display: table-cell;
   padding: 10px 12px 10px 0px;
   vertical-align: baseline;  
@@ -578,7 +592,7 @@ li:hover .basket-form {
   cursor: pointer;  
 }
 
-.basket-form .summa {
+.basket-form .amount {
   text-align: right;
   font-size: 15px;
   line-height: 18px; 
@@ -938,6 +952,12 @@ li:hover .basket-form {
   left: 265px;  
 }
 
+.shadow {
+  position: absolute;
+  top: 172px;
+  left: 300px;  
+}
+
 .big-address {
   position: absolute;
   top: 62px;
@@ -1005,7 +1025,6 @@ li:hover .basket-form {
   border-radius: 5px;
   background-color: #f8f7f4;
   padding: 18px 26px 26px 26px; 
-  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
 }
 
 .form-callback p {
