@@ -37,8 +37,6 @@ box-sizing: inherit;
 
 body {
   font-family: "Roboto", "Verdana", sans-serif;
-  /*width: 1200px;
-  margin: 0 auto;*/
 }
 
 img {
@@ -48,6 +46,7 @@ img {
 
 .site-wrapper {
   background-color: #849d8f;
+  min-width: 1200px;
 }
 
 .container {
@@ -966,7 +965,8 @@ li:focus-within .basket-form {
   border-radius: 15px;
   padding: 30px 27px;
   background-color: #fdfefe;
-  color: #323232;   
+  color: #323232;  
+  z-index: 3;  
 }
 
 .font-address1 {
@@ -1024,7 +1024,8 @@ li:focus-within .basket-form {
   border-radius: 5px;
   background-color: #f8f7f4;
   padding: 18px 26px 26px 26px;
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);  
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4); 
+  z-index: 5;  
 }
 
 .form-callback p {
@@ -1540,7 +1541,7 @@ a.current-pagination {
 
 .social li {
   margin-right: 11px;	
-  margin-bottom: 11px;	
+  margin-bottom: 11px;  
 }
 
 .social li:nth-child(6n) {
@@ -1651,6 +1652,16 @@ a.current-pagination {
 
 .footer-copyright p {
   margin-top: 2px; 
+}
+
+/*Яндекс-карта*/
+
+.yandex-map {
+  position: absolute;
+  height: 430px;
+  left: 0;
+  right: 0; 
+  z-index: 2;  
 }
 
 /*Классы для модального окна*/
