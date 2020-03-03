@@ -638,12 +638,12 @@ li:focus-within .basket-form {
 }
 
 .slide-caption {
-  position: absolute;
+  position: relative;
   width: 700px;
-  top: 315px;
-  left: 50%;
-  margin-left: -350px; 
-  text-align: center; 
+  margin-top: 304px;
+  margin-left: 223px;
+  margin-bottom: 38px;
+  text-align: center;  
 }
 
 .slide-title {
@@ -889,16 +889,18 @@ li:focus-within .basket-form {
 
 .subscription {
   width: 560px;
-  height: 222px;
+  min-height: 222px;
+  padding: 6px;
   color: #5a5a5a;
   border-radius: 15px;
+  background-color: #ffffff;
   background-image: url("../img/bg-post.svg");
-  background-repeat: no-repeat;		
+  background-repeat: no-repeat;
+  background-size: cover; 	
 }
 
 .substrate {
-  margin: 6px;
-  height: 210px;
+  height: 100%;
   padding: 27px 16px 27px 20px;
   border-radius: 15px;
   background-color: #f8f7f4;
@@ -913,7 +915,7 @@ li:focus-within .basket-form {
 }
 
 .substrate form {
-  padding-top: 34px;
+  margin-top: 17px;
 }
 
 .substrate input {
@@ -924,6 +926,7 @@ li:focus-within .basket-form {
 }
 
 .substrate .button {
+  margin-top: 17px;
   margin-left: 10px;
   padding: 11px 18px; 
 }
@@ -1382,16 +1385,22 @@ li:focus-within .basket-form {
   padding-left: 0; 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;  
+  justify-content: flex-start;  
 }
 
 .item {
   margin-top: 8px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   position: relative;
   width: 267px;
+  margin-right: 26px;
   padding: 0 0 15px 0;
-  text-align: center;   
+  text-align: center; 
+  min-height: 335px;
+}
+
+.item:nth-child(4n) {
+  margin-right: 0;	
 }
 
 .item-link {

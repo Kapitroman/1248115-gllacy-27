@@ -91,6 +91,13 @@ window.addEventListener("keydown", function (evt) {
     var address = document.querySelector(".address");
     var yandexMap = document.querySelector(".yandex-map");
     yandexMap.style.top = address.offsetTop + "px";
+	
+	var items = document.querySelectorAll(".item");
+    for (var i = 0; 0 < items.length; i++) {	
+	  items[i].style.backgroundColor = "red";     
+      items[i].style.height = items[i].offsetHeight + "px";  
+    };
+	
 }
 
 
