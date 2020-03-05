@@ -342,6 +342,18 @@ li:focus-within .sub-navigation  {
   margin-left: 10px;	
 }
 
+.user-nav-link svg {
+  vertical-align: top;
+  margin-right: 8px;
+}
+
+.user-nav-link:hover path,
+.user-nav-link:focus path,
+.user-nav-link:hover circle,
+.user-nav-link:focus circle {
+  fill: #000000;	
+}
+
   /*Поиск*/
 
 .search-link {
@@ -349,16 +361,6 @@ li:focus-within .sub-navigation  {
   height: 32px;
   padding: 8px;
   border-radius: 50%;
-  background-image: url("../img/loupe.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-.search-link:hover,
-.search-link:focus {
-  background-image: url("../img/loupe-active.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;  
 }
 
 li:hover .search-form,
@@ -370,18 +372,8 @@ li:focus-within .search-form {
   /*Личный кабинет*/
 
 .login-link {
-  padding: 8px 16px 8px 45px;
-  border-radius: 16px;
-  background-image: url("../img/entrance.svg"); 
-  background-repeat: no-repeat;
-  background-position: 16px 50%; 
-}
-
-.login-link:hover,
-.login-link:focus {
-  background-image: url("../img/entrance-focus.svg");
-  background-repeat: no-repeat;
-  background-position: 16px 50%;  
+  padding: 8px 16px 8px 16px;
+  border-radius: 16px; 
 }
 
 li:hover .entrance-form,
@@ -392,18 +384,8 @@ li:focus-within .entrance-form {
   /*Корзина*/
 
 .nothing {
-  padding: 8px 16px 8px 45px;
+  padding: 8px 16px 8px 16px;
   border-radius: 16px;
-  background-image: url("../img/basket.svg");
-  background-repeat: no-repeat;
-  background-position: 16px 50%;
-}
-
-.nothing:hover,
-.nothing:focus {
-  background-image: url("../img/basket-black.svg"); 
-  background-repeat: no-repeat;
-  background-position: 16px 50%;
 }
 
 .user-navigation a.basket-link {
@@ -443,10 +425,14 @@ li:focus-within .basket-form {
   line-height: 16px;  
 }
 
-.contacts span:last-child {
+.contacts [href^="tel"] {
+  display: block;
+  vertical-align: top;
   padding-top: 4px;
+  color: #ffffff;
   font-size: 22px;
-  line-height: 24px; 
+  line-height: 24px;
+  text-decoration: none;  
 }
 
 /*Поп-окна*/
@@ -674,6 +660,10 @@ li:focus-within .basket-form {
   cursor: pointer;
 }
 
+.slider-controls label:hover {
+  background-color: rgba(255, 255, 255, 0.4);  	
+}
+
 .product-1:checked ~ .site-wrapper {
   background-color: #849d8f;
 }
@@ -696,6 +686,7 @@ li:focus-within .basket-form {
 .product-2:checked ~ .site-wrapper label[for="product-2"],
 .product-3:checked ~ .site-wrapper label[for="product-3"] {
   background-color: #ffffff;
+  cursor: default;
 }
 
   /* Баннер*/
@@ -976,7 +967,7 @@ li:focus-within .basket-form {
   margin: 0;
   font-weight: 400;
   font-size: 14px;
-  line-height: 20px;  
+  line-height: 20px; 
 }
 
 .font-address1 span {
@@ -986,16 +977,21 @@ li:focus-within .basket-form {
 }
 
 .font-address2 {
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;  
 }
 
-.font-address2 span {
+.font-address2 [href^="tel"] {
+  display: block;
+  vertical-align: top;
+  color: #323232;  
   font-weight: 700;
   font-size: 18px;
-  line-height: 22px;  	
+  line-height: 22px;
+  text-decoration: none;  
 }
 
 .font-address1 + .font-address1 {
@@ -1003,13 +999,14 @@ li:focus-within .basket-form {
 }
 
 .font-address1 + .font-address2 {
-  margin-top: 8px;	
+  margin-top: 6px;	
 }
 
 .big-address .button {
   display: block;
-  text-align: center;
   vertical-align: top; 
+  margin-top: 25px;
+  text-align: center;
 }
 
 
@@ -1262,6 +1259,7 @@ li:focus-within .basket-form {
 }
 
 .field-fat label {
+  position: relative;
   padding-left: 32px;
   margin-right: 16px;
 }
@@ -1274,28 +1272,37 @@ li:focus-within .basket-form {
   display: none; 	
 }
 
-.filters input[type="radio"]:checked+label {
-  background-image: url("../img/radio-on.png");
+.filters input[type="radio"]:checked+label::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 22px;
+  height: 22px;  
+  background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
-  background-position: 0px 50%;  
+  opacity: 0.8;
 }
 
-.filters input[type="radio"]:checked+label:hover {
-  background-image: url("../img/radio-on-hover.png");
-  background-repeat: no-repeat;
-  background-position: 0px 50%;  
+.filters input[type="radio"]+label::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat; 
+  opacity: 0.8;  
 }
 
-.filters input[type="radio"]+label {
-  background-image: url("../img/radio-off.png");
-  background-repeat: no-repeat;
-  background-position: 0px 50%;  
+.filters input[type="radio"]:checked+label:hover::before,
+.filters input[type="radio"]+label:hover::before {
+  opacity: 1;	
 }
 
-.filters input[type="radio"]+label:hover {
-  background-image: url("../img/radio-off-hover.png");
-  background-repeat: no-repeat;
-  background-position: 0px 50%;  
+.filters input[type="radio"]:disabled+label::before {
+  opacity: 0.4;	
 }
 
   /*Наполнители*/
@@ -1307,8 +1314,9 @@ li:focus-within .basket-form {
 }
 
 .field-filler label {
+  position: relative;	
   padding-left: 33px;
-  margin-right: 21px;
+  margin-right: 20px;
 }
 
 .field-filler label:last-child {
@@ -1319,28 +1327,37 @@ li:focus-within .basket-form {
   display: none; 	
 }
 
-.filters input[type="checkbox"]:checked+label {
-  background-image: url("../img/checkbox-on.png");
+.filters input[type="checkbox"]:checked+label::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 24px;
+  height: 20px;  
+  background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
-  background-position: 0px 50%;
+  opacity: 0.8;
 }
 
-.filters input[type="checkbox"]:checked+label:hover {
-  background-image: url("../img/checkbox-on-hover.png");
+.filters input[type="checkbox"]+label::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 20px;
+  height: 20px;  
+  background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
-  background-position: 0px 50%;
+  opacity: 0.8;	
 }
 
-.filters input[type="checkbox"]+label {
-  background-image: url("../img/checkbox-off.png");
-  background-repeat: no-repeat;
-  background-position: 0px 50%;
+.filters input[type="checkbox"]:checked+label:hover::before,
+.filters input[type="checkbox"]+label:hover::before {
+  opacity: 1;	
 }
 
-.filters input[type="checkbox"]+label:hover {
-  background-image: url("../img/checkbox-off-hover.png");
-  background-repeat: no-repeat;
-  background-position: 0px 50%;
+.filters input[type="checkbox"]:disabled+label::before {
+  opacity: 0.4;	
 }
 
   /*Кнопка*/
@@ -1390,7 +1407,7 @@ li:focus-within .basket-form {
 
 .item {
   margin-top: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   position: relative;
   width: 267px;
   margin-right: 26px;
@@ -1557,7 +1574,8 @@ a.current-pagination {
   margin-right: 0;	
 }
 
-.twitter::before {
+
+/*.twitter::before {
   content: url("../img/twitter-usually.png");
 }
 
@@ -1607,6 +1625,23 @@ a.current-pagination {
 
 .vk:active::before {
   content: url("../img/vk-active.png");		
+}*/
+
+.social-icon svg {
+  opacity: 0.8;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);  
+}
+
+.social-icon:hover svg,
+.social-icon:focus svg {
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);  
+}
+
+.social-icon:active path {
+  fill: #e9e9e9;
 }
 
   /*ИНфо*/
