@@ -28,11 +28,11 @@
 /* Глобальные */
 
 html {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *, *::before, *::after {
-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -45,6 +45,7 @@ img {
 }
 
 .site-wrapper {
+  /*position: relative;*/
   background-color: #849d8f;
   min-width: 1200px;
 }
@@ -103,7 +104,7 @@ img {
   color: #ffffff;
   font-size: 18px;
   line-height: 24px;
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76); 
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76); 
   text-decoration: none;
   cursor: pointer;
 }
@@ -124,7 +125,7 @@ form .button {
 .button:hover,
 .button:focus {
   background-image: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 1);
+  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 1);
 }
 
 .button:active {
@@ -218,7 +219,7 @@ textarea:focus {
 .site-navigation a:active {
   background-color: #f8f7f4;
   color: #323232;
-  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.7);
+  box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.7);
   text-decoration: none;
 }
 
@@ -239,7 +240,7 @@ li:focus-within .sub-navigation  {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .sub-navigation a {
@@ -276,11 +277,11 @@ li:focus-within .sub-navigation  {
  padding: 11px 20px;
  font-weight: 700;
  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
- border-radius: 5px 5px 0px 0px;  
+ border-radius: 5px 5px 0 0;  
 }
 
 .sub-navigation li:last-child > a {
- border-radius: 0px 0px 5px 5px;  
+ border-radius: 0 0 5px 5px;  
 }
 
 .on-page {
@@ -304,7 +305,7 @@ li:focus-within .sub-navigation  {
   font-weight: 500;
 }
 
-.user-navigation a:not(.text-ref-white)/*:not(.basket-link)*/ {
+.user-navigation a:not(.text-ref-white) {
   display: block;
   vertical-align: top;
   background-color: rgba(255, 255, 255, 0.2);
@@ -367,8 +368,7 @@ li:hover .search-form,
 li:focus-within .search-form {
   display: block;	
 }
-
-
+	
   /*Личный кабинет*/
 
 .login-link {
@@ -650,10 +650,10 @@ li:focus-within .basket-form {
 
 .slider-controls label {
   display: inline-block;
+  vertical-align: top;
   width: 20px;
   height: 20px;
-  margin-right: 9px;
-  vertical-align: top;
+  margin-right: 9px;  
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
@@ -1060,24 +1060,17 @@ li:focus-within .basket-form {
 }
 
 .callback-close {
-  visibility: hidden;
-}
-
-.callback-close::before {
-  visibility: visible;
-  content: "";
   position: absolute;
   top: 15px;
   right: 15px;
   width: 19px;
   height: 19px;
   background-color: transparent;
+  border: none;
   background-image: url("../img/cross-big.svg"); 
   background-repeat: no-repeat;
   cursor: pointer;
 }
-
-
 
 /*Страница содержимого cream-ice.html*/
 
@@ -1408,9 +1401,9 @@ li:focus-within .basket-form {
 .item {
   margin-top: 8px;
   margin-bottom: 4px;
+  margin-right: 26px;
   position: relative;
   width: 267px;
-  margin-right: 26px;
   padding: 0 0 15px 0;
   text-align: center; 
   min-height: 335px;
@@ -1440,7 +1433,7 @@ li:focus-within .basket-form {
 .catalog-price {
   position: absolute;
   top: 162px;
-  left: 0px;
+  left: 0;
   font-size: 45px;
   line-height: 45px;
   font-weight: 700;   
@@ -1480,7 +1473,7 @@ li:focus-within .basket-form {
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.2);
   z-index: 1; 
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);  
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);  
 }
 
 .item-hover:hover .quick-look {
@@ -1549,7 +1542,7 @@ a.current-pagination {
 
 .main-footer {
   margin: 0;	
-  padding: 0px 0px 18px 0px;
+  padding: 0 0 18px 0;
   display: flex;
   justify-content: space-between;   
 }
@@ -1573,59 +1566,6 @@ a.current-pagination {
 .social li:nth-child(6n) {
   margin-right: 0;	
 }
-
-
-/*.twitter::before {
-  content: url("../img/twitter-usually.png");
-}
-
-.fb::before {
-  content: url("../img/fb-usually.png");
-}
-
-.instagram::before {
-  content: url("../img/instagram-usually.png");
-}
-
-.vk::before {
-  content: url("../img/vk-usually.png");		
-}
-
-.twitter:hover::before,
-.twitter:focus::before {
-  content: url("../img/twitter-hover.png");
-}
-
-.fb:hover::before,
-.fb:focus::before {
-  content: url("../img/fb-hover.png");
-}
-
-.instagram:hover::before,
-.instagram:focus::before {
-  content: url("../img/instagram-hover.png");
-}
-
-.vk:hover::before,
-.vk:focus::before {
-  content: url("../img/vk-hover.png");		
-}
-
-.twitter:active::before {
-  content: url("../img/twitter-active.png");
-}
-
-.fb:active::before {
-  content: url("../img/fb-active.png");
-}
-
-.instagram:active::before {
-  content: url("../img/instagram-active.png");
-}
-
-.vk:active::before {
-  content: url("../img/vk-active.png");		
-}*/
 
 .social-icon svg {
   opacity: 0.8;
@@ -1663,7 +1603,6 @@ a.current-pagination {
   width: 177px;
   margin: 0;
   padding: 0;
-  padding-left: 0px;
 }
 
 .info li:nth-child(2n+1) {
@@ -1704,8 +1643,21 @@ a.current-pagination {
   position: absolute;
   height: 430px;
   left: 0;
-  right: 0; 
+  right: 0;
+  background-color: inherit;  
   z-index: 2;  
+}
+
+.product-1:checked ~ .site-wrapper .yandex-map {
+  background-color: #849d8f;
+}
+
+.product-2:checked ~ .site-wrapper .yandex-map {
+  background-color: #8996a6;
+}
+
+.product-3:checked ~ .site-wrapper .yandex-map {
+  background-color: #9d8b84;
 }
 
 /*Классы для модального окна*/
