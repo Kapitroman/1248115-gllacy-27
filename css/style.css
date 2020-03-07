@@ -223,8 +223,8 @@ textarea:focus {
   text-decoration: none;
 }
 
-li:hover .sub-navigation,
-li:focus-within .sub-navigation  {
+li:hover .sub-navigation /*,
+li:focus-within .sub-navigation */ {
   display: block;	
 }
 
@@ -364,8 +364,8 @@ li:focus-within .sub-navigation  {
   border-radius: 50%;
 }
 
-li:hover .search-form,
-li:focus-within .search-form {
+li:hover .search-form /*,
+li:focus-within .search-form */ {
   display: block;	
 }
 	
@@ -376,8 +376,8 @@ li:focus-within .search-form {
   border-radius: 16px; 
 }
 
-li:hover .entrance-form,
-li:focus-within .entrance-form {
+li:hover .entrance-form /*,
+li:focus-within .entrance-form */ {
   display: block;	
 }
 
@@ -398,8 +398,8 @@ li:focus-within .entrance-form {
   background-position: 16px 50%;	
 }
 
-li:hover .basket-form,
-li:focus-within .basket-form {
+li:hover .basket-form /*,
+li:focus-within .basket-form */ {
   display: block;	
 }
 
@@ -628,7 +628,7 @@ li:focus-within .basket-form {
   width: 700px;
   margin-top: 304px;
   margin-left: 223px;
-  margin-bottom: 38px;
+  /*margin-bottom: 38px;*/
   text-align: center;  
 }
 
