@@ -45,7 +45,6 @@ img {
 }
 
 .site-wrapper {
-  /*position: relative;*/
   background-color: #849d8f;
   min-width: 1200px;
 }
@@ -657,7 +656,6 @@ li:focus-within .basket-form {
   width: 700px;
   margin-top: 304px;
   margin-left: 223px;
-  /*margin-bottom: 38px;*/
   text-align: center;  
 }
 
