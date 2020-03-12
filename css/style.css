@@ -223,8 +223,15 @@ textarea:focus {
   text-decoration: none;
 }
 
-li:hover .sub-navigation /*,
-li:focus-within .sub-navigation */ {
+li:hover .sub-navigation {
+  display: block;	
+}
+
+li:focus-within .sub-navigation {
+  display: block;	
+}
+
+.nav-catalog:focus + .sub-navigation {
   display: block;	
 }
 
@@ -364,8 +371,15 @@ li:focus-within .sub-navigation */ {
   border-radius: 50%;
 }
 
-li:hover .search-form /*,
-li:focus-within .search-form */ {
+li:hover .search-form {
+  display: block;	
+}
+
+li:focus-within .search-form  {
+  display: block;	
+}
+
+.search-link:focus + .search-form  {
   display: block;	
 }
 	
@@ -376,8 +390,16 @@ li:focus-within .search-form */ {
   border-radius: 16px; 
 }
 
-li:hover .entrance-form /*,
-li:focus-within .entrance-form */ {
+li:hover .entrance-form {
+  display: block;	
+}
+
+
+li:focus-within .entrance-form {
+  display: block;	
+}
+
+.login-link:focus + .entrance-form {
   display: block;	
 }
 
@@ -398,8 +420,15 @@ li:focus-within .entrance-form */ {
   background-position: 16px 50%;	
 }
 
-li:hover .basket-form /*,
-li:focus-within .basket-form */ {
+li:hover .basket-form {
+  display: block;	
+}
+
+li:focus-within .basket-form {
+  display: block;	
+}
+
+.basket-link:focus + .basket-form {
   display: block;	
 }
 
