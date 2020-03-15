@@ -1,16 +1,5 @@
 window.onload = init2;
   function init2() { 
-
-    var items = document.querySelectorAll(".item");
-    for (var i = 0; i < items.length; i++) {	     
-      items[i].style.height = items[i].offsetHeight + "px";  
-    };
-
-    var address = document.querySelector(".address");
-    var yandexMap = document.querySelector(".yandex-map");
-    yandexMap.style.top = address.offsetTop + "px";
-
-
   
     var callButton = document.querySelector(".call-button");
     var formCallback = document.querySelector(".form-callback");

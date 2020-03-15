@@ -54,7 +54,7 @@
 		            </p> 
                     <div class="wrap-entrance-link">
                       <p>
-		                <a class="text-ref-white" href="#">Забыли пароль</a> <br>
+		                <a class="text-ref-white" href="#">Забыли пароль</a>
 			            <a class="text-ref-white" href="#">Новая регистрация</a>
 		              </p>
                       <button class="button" type="submit">Войти</button>  
@@ -159,8 +159,8 @@
                     <div class="scale">
                       <div class="bar"></div>
                     </div>
-                    <div class="range-toggle range-toggle-min"></div>
-                    <div class="range-toggle range-toggle-max"></div>
+                    <div class="range-toggle range-toggle-min" tabindex="0"></div>
+                    <div class="range-toggle range-toggle-max" tabindex="0"></div>
                   </div>
 			    </div>
               </fieldset>
@@ -370,16 +370,18 @@
 		      </li>
 		    </ul>
 	      </section>
-	  
-	      <ul class="pagination">
-	        <li><a class="left-arrow"><span class="visually-hidden">&lt;</span></a></li>
-            <li><a class ="current-pagination">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-		    <li><a href="#">5</a></li>
-		    <li><a class="right-arrow" href="#"><span class="visually-hidden">&gt;</span></a></li>
-          </ul>
+
+	      <div class="link-pagination">
+	        <a class="left-arrow"><span class="visually-hidden">&lt;</span></a>
+	        <ul class="pagination">
+              <li><a class ="current-pagination">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+		      <li><a href="#">5</a></li>
+            </ul>
+		    <a href="#" class="right-arrow"><span class="visually-hidden">&gt;</span><svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path fill="#C1C6CE" d="M7.237 5.642L1.73.132c-.2-.197-.52-.197-.717 0s-.198.52 0 .717L6.163 6l-5.15 5.15c-.2.198-.2.52 0 .717.098.1.228.148.357.148.13 0 .26-.05.358-.148l5.51-5.51c.198-.197.198-.517 0-.715z"/></svg></a>
+	  	  </div>
 	  	  	  	
 	    </main>
 	
@@ -413,6 +415,5 @@
 	    </footer>
 	  </div>
 	</div>
-	<script src="js/script-min.js"></script>
   </body>
 </html>
